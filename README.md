@@ -11,7 +11,7 @@ O programa deve gerenciar uma fila de veículos para atendimento em um posto de 
   - [Walisson Mendes](https://github.com/MrDuckBr)
 
 # Importante
-Todas as alterações de códigos devem ser enviadas para a branch 'dev' e psoteriormente será unida à master.
+Todas as alterações de códigos devem ser enviadas para a branch 'dev' e posteriormente será unida à master.
 Solicitar 'Pull Requests' antes de realizar ações das quais não possui certeza do funcionamento ou não foi comunicada com a equipe.
 
 # Boas práticas para organização
