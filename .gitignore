@@ -1,8 +1,4 @@
-######################
-# Backend
-######################
 **/.idea/
-**/sicarf-backend.iml
 **/HELP.md
 **/target/
 **/pom.xml.tag
@@ -39,9 +35,3 @@
 **/.loadpath
 **/.factorypath
 **/src/main/resources/rebel.xml
-.idea/
-
-######################
-# Frontend
-######################
-**/coverage
