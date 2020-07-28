@@ -1,4 +1,4 @@
-/*
+package src.models;/*
 Verificar se os funcionarios nao tem atributos propriose
 */
 

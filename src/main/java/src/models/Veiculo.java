@@ -1,3 +1,5 @@
+package src.models;
+
 class Veiculo{
     private int capTanque;
     private int qtdPneu;

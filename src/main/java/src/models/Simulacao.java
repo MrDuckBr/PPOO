@@ -1,3 +1,5 @@
+package src.models;
+
 import java.util.ArrayList;
 
 public class Simulacao {
@@ -20,8 +22,8 @@ public class Simulacao {
 
     //configuracao da fila do posto de combustivel
     public void adicionaVeiculoFila(){
-       filaFuncionario.add(new Funcionario(nome, cpf, tempoAtendimento, idade, dataAdmissao));
-       filaVeiculo.add(new Veiculo(capTanque, qtdPneu, marca, modelo, anoFabricacao, tipoCombustivel));
+       // filaFuncionario.add(new Funcionario(nome, cpf, tempoAtendimento, idade, dataAdmissao));
+       // filaVeiculo.add(new Veiculo(capTanque, qtdPneu, marca, modelo, anoFabricacao, tipoCombustivel));
     }
 
     

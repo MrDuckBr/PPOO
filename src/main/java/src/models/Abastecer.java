@@ -1,3 +1,5 @@
+package src.models;
+
 public class Abastecer { // verificar se precisa de uma classe para cada
 
     public double tempoAbastecer(String tipoCombustivel){

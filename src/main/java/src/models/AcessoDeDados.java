@@ -1,3 +1,5 @@
+package src.models;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -23,7 +25,7 @@ public class AcessoDeDados {
 
             while (linha != null) {
                 String[] campos = linha.split(",");
-                adicionarAluno(new Aluno(Integer.parseInt(campos[0]), campos[1], Double.parseDouble(campos[2])));
+                // adicionarAluno(new Aluno(Integer.parseInt(campos[0]), campos[1], Double.parseDouble(campos[2])));
                 linha = arq.readLine();
             }
             arq.close();

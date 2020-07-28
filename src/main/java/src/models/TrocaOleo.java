@@ -1,3 +1,5 @@
+package src.models;
+
 public class TrocaOleo {
 
     public double trocarOleo(){
