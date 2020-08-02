@@ -36,6 +36,7 @@ class Veiculo{
     public int getAnoFabricaco(){
         return anoFabricacao;
     }
+
     public String getTipoCombustivel(){
         return tipoCombustivel;
     }
