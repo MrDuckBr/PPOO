@@ -5,10 +5,11 @@ class Veiculo{
     private String modelo;
     private int anoFabricacao;
     private String tipoCombustivel;
+    private double combustivelNoTanque;
 
 
     Veiculo(int capTanque, int qtdPneu , String marca,
-    String modelo, int anoFabricacao , String tipoCombustivel){
+    String modelo, int anoFabricacao , String tipoCombustivel, double combustivelNoTanque){
         this.capTanque = capTanque;
         this.qtdPneu = qtdPneu;
         this.marca = marca;
@@ -40,4 +41,6 @@ class Veiculo{
     public String getTipoCombustivel(){
         return tipoCombustivel;
     }
+
+    public double getCombustivelNoTanque() { return combustivelNoTanque; }
 }

@@ -4,55 +4,49 @@ public class Abastecer { // verificar se precisa de uma classe para cada
     public static double precoAlcool = 2.80;
     public static double precoDiesel = 3.15;
 
-    public void abastecerVeiculo(Veiculo veiculo, double quantidade){
-
+    public float abastecerVeiculo(Veiculo veiculo, double quantidade) throws Exception {
+        if(quantidade < veiculo.getCapTanque()) {
+            double quantidadeAbastecida = qtdAbastecer(veiculo, quantidade);
+            return precoAbastecer(veiculo, quantidadeAbastecida);
+        }
+        throw new RuntimeException("Veiculo com tanque cheio, impossível abastecer");
     }
 
     // abastecer por quantidade ex: 20 litros
-    public double qtdAbastecer(double quantidade, String combustivel){
-        if (quantidade < capTanque){
-            abastecerVeiculo(quantidade, combustivel); //implementar
-            // checar tanque cheio?
-            // receber quantidade atual no tanque do carro?
-            // quais entradas possiveis? E que tipo de informações temos do carro que está na fila?
+    public double qtdAbastecer(Veiculo veiculo, double quantidade) {
+        double combustivelResultante = veiculo.getCapTanque() - veiculo.getCombustivelNoTanque();
+        double abastecer = combustivelResultante + quantidade;
+
+        // aqui podemos atualizar o atributo do combustivel no tanque, ou deixar sem atualizar.
+        if(abastecer <= veiculo.getCapTanque()) {
+            if(abastecer == veiculo.getCapTanque()) {
+                System.out.println("Veiculo abastecido completamente");
+                return quantidade;
+            }
+            else {
+                // podemos colocar a % restante para completar o tanque tmb
+                System.out.println("Veiculo abastecido com sucesso");
+                return quantidade;
+            }
         }
-        else if(quantidade == tanque){
-            encherTanque(combustivel); // somente se não houver tratamento da quantidade ja existente no tanque
-        }
-        else{
-            System.out.println("Quantidade excede a capacidade do tanque!");
+        else { // aqui caso a quantidade exceda a capacidade do tanque. Podemos mostrar o valor excedido?
+            double combustivelSobrou = abastecer - veiculo.getCapTanque();
+            System.out.println("Não foi possível abastencer com a quantidade total");
+            return combustivelResultante;
         }
     }
 
-    public void precoAbastecer(double valor, String combustivel){
-        private double conversao;
-        if (combustivel == "Gasolina"){
-            conversao = valor / precoGasolina;
-            abastecerVeiculo(conversao, "Gasolina");
+    // calculo do preço do combustivel por cada tipo
+    public float precoAbastecer(Veiculo veiculo, double quantidadeAbastecida ){
+        if(veiculo.getTipoCombustivel() == "Diesel") {
+            return (float) (quantidadeAbastecida * precoDiesel);
         }
-        else if ( combustivel == "Alcool"){
-            conversao = valor / precoAlcool;
-            abastecerVeiculo(conversao, "Alcool");
-        }else if (combustivel == "Diesel"){
-            conversao = valor / precoDiesel;
-        }else{
-            System.out.println("Não foi possivel compeltar a ação");
+        else if(veiculo.getTipoCombustivel() == "Gasolina") {
+            return (float) (quantidadeAbastecida * precoGasolina);
         }
-
+        else if(veiculo.getTipoCombustivel() == "Alcool") {
+            return (float) (quantidadeAbastecida * precoAlcool);
+        }
+        throw new RuntimeException("Tipo de combustivel não existe");
     }
-    public double tempoAbastecer(String tipoCombustivel){ //tempo varia de funcionario e não de combustível
-        if(tipoCombustivel == "Diesel"){
-            return 75.0;
-        }else if(tipoCombustivel == "Gasolina"){
-            return 50.0;
-
-        }else{
-            return 40.0;
-        }
-    }
-
-    
-
-	
-    
 }
