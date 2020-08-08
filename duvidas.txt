@@ -5,3 +5,9 @@
 3 - Como seria a estratégia de atendimento? Apenas FIFO ou devemos implementar vários tipos?
 
 4 - Estatísticas gerais por Postos de atendimento: Vários postos de combustível ou várias bombas de combustível?
+
+
+
+
+
+FUNCIONARIO INTERMERDI RETIRADO PARA A CONFECCAO DA CLASSE SIMULACAO

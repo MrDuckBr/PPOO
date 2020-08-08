@@ -5,6 +5,7 @@ class Veiculo{
     private String modelo;
     private int anoFabricacao;
     private String tipoCombustivel;
+    private double tempoChegadaVeiculo;
 
 
     Veiculo(int capTanque, int qtdPneu , String marca,
@@ -15,6 +16,7 @@ class Veiculo{
         this.modelo = modelo;
         this.anoFabricacao = anoFabricacao;
         this.tipoCombustivel = tipoCombustivel;
+        tempoChegadaVeiculo = 0;
     }
 
     public int getCapTanque(){
@@ -40,4 +42,7 @@ class Veiculo{
     public String getTipoCombustivel(){
         return tipoCombustivel;
     }
+
+    public void setTempoChegadaVeiculo(double valor){ this.tempoChegadaVeiculo = valor; }
+
 }
