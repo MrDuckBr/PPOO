@@ -7,12 +7,17 @@ public class Funcionario {
     private String cpf;
     private int idade;
     private String dataAdmissao;
+    /*Atributos simulacao*/
+    private boolean ocupado;
+    private double tempo;
 
     public Funcionario(String nome, String cpf, int idade, String dataAdmissao) {
         this.nome=nome;
         this.cpf=cpf;
         this.idade = idade;
         this.dataAdmissao = dataAdmissao;
+        ocupado = false;
+        tempo = 0;
     }
 
     public String getDataAdmissao() {
@@ -26,6 +31,14 @@ public class Funcionario {
     }
     public String getNome() {
         return nome;
+    }
+
+    public boolean getOcupado(){
+        return  ocupado;
+    }
+
+    public boolean setOcupado(boolean ocupado){
+        this.ocupado = ocupado;
     }
 
    

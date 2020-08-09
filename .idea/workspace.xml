@@ -27,17 +27,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c0e13b6-3fa0-4bd8-a655-3fd241bca5cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/PatoGordin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PPOO.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EstatisticaSimulacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/EstatisticaSimulacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eventos.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eventos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FuncIntermed.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControleSimulacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ControleSimulacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Funcionario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Veiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/duvidas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/duvidas.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +61,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/IntelliJ.Portuguese.Brazil.Dictionary-master/portuguese-brazil.dic" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
+    <property name="settings.editor.selected.configurable" value="proofread" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="4" Folder0="C:\Users\PatoGordin\Downloads\IntelliJ.Portuguese.Brazil.Dictionary-master" Folder1="C:\Users\PatoGordin\Downloads\IntelliJ.Portuguese.Brazil.Dictionary-master" Folder2="C:\Users\PatoGordin\Downloads\IntelliJ.Portuguese.Brazil.Dictionary-master" Folder3="C:\Users\PatoGordin\Downloads\IntelliJ.Portuguese.Brazil.Dictionary-master" CustomDictionaries="4" CustomDictionary0="C:\Users\PatoGordin\Downloads\IntelliJ.Portuguese.Brazil.Dictionary-master\portuguese-brazil_technical-terms_without-accents.dic" CustomDictionary1="C:\Users\PatoGordin\Downloads\IntelliJ.Portuguese.Brazil.Dictionary-master\portuguese-brazil_without-accents.dic" CustomDictionary2="C:\Users\PatoGordin\Downloads\IntelliJ.Portuguese.Brazil.Dictionary-master\portuguese-brazil_technical-terms.dic" CustomDictionary3="C:\Users\PatoGordin\Downloads\IntelliJ.Portuguese.Brazil.Dictionary-master\portuguese-brazil.dic" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -105,13 +98,21 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="519" y="85" key="#com.intellij.ide.util.MemberChooser" timestamp="1596932714733">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state x="519" y="85" key="#com.intellij.ide.util.MemberChooser/62.0.1304.768@62.0.1304.768" timestamp="1596932714733" />
     <state x="494" y="139" key="FileChooserDialogImpl" timestamp="1596927142488">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
     <state x="494" y="139" key="FileChooserDialogImpl/62.0.1304.768@62.0.1304.768" timestamp="1596927142488" />
-    <state x="215" y="29" key="SettingsEditor" timestamp="1596927146537">
+    <state x="215" y="29" key="SettingsEditor" timestamp="1596932557780">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state x="215" y="29" key="SettingsEditor/62.0.1304.768@62.0.1304.768" timestamp="1596927146537" />
+    <state x="215" y="29" key="SettingsEditor/62.0.1304.768@62.0.1304.768" timestamp="1596932557780" />
+    <state x="377" y="89" width="672" height="160" key="search.everywhere.popup" timestamp="1596932004861">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state x="377" y="89" width="672" height="160" key="search.everywhere.popup/62.0.1304.768@62.0.1304.768" timestamp="1596932004861" />
   </component>
 </project>

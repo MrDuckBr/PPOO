@@ -1,6 +1,9 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Random;
 
-public class ControleSimulacao {
+public class ControleSimulacao  {
     /*
     * Controlar a simulacao de evento discreto
     * -adicao na fila
@@ -10,11 +13,15 @@ public class ControleSimulacao {
     *
     * */
     private static double tempo_Global;
-    private Random random;
+    private final Random random;
+    private Queue<Veiculo> filaEventos;
+    private ArrayList<Funcionario> funcionarios;
 
     ControleSimulacao(){
             tempo_Global = 0;
             random = new Random();
+            filaEventos = new LinkedList<>();
+            funcionarios = new ArrayList<>();
     }
 
     /*
@@ -37,6 +44,30 @@ public class ControleSimulacao {
     public void tempoDeChegadaPosto(Veiculo veiculo){
         veiculo.setTempoChegadaVeiculo(random.nextInt());
     }
+    /*Adiciona o tempo gasto em cada acao , para cada objeto*/
+    public void setTempoObjeto(Veiculo veiculo){
+        //veiculo.setTempoNoPosto(????);
+    }
+
+    /*Assumir que ja esta na ponta da fila*/
+
+    public void realizaAcao(){
+        if(!filaEventos.isEmpty()){
+            Veiculo aux = filaEventos.peek();
+            Funcionario funcAux = null;
+            for (Funcionario f:funcionarios ) {
+                if(!f.getOcupado()){// verificar se funcionario esta disponivel
+                    funcAux = f;
+                }
+            }
+
+
+
+
+
+        }
+    }
+
 
 
 
