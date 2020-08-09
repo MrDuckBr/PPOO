@@ -8,7 +8,7 @@ public class Simulacao {
     ArrayList<Veiculo> filaVeiculo;
 
 
-    Simulacao(){
+    Simulacao() {
         filaFuncionario = new ArrayList<>();
         filaVeiculo = new ArrayList<>();
     }
@@ -19,16 +19,16 @@ public class Simulacao {
     //criacao dos veiculos
 
     //configuracao da fila do posto de combustivel
-    public void adicionaVeiculoFila(){
+    /*public void adicionaVeiculoFila(){
        filaFuncionario.add(new Funcionario(nome, cpf, tempoAtendimento, idade, dataAdmissao));
        filaVeiculo.add(new Veiculo(capTanque, qtdPneu, marca, modelo, anoFabricacao, tipoCombustivel));
     }
 
-    
+    /*
+    }
+     */
 
 
-
-       
 
         
 

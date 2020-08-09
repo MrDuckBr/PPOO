@@ -49,22 +49,30 @@ public class ControleSimulacao  {
         //veiculo.setTempoNoPosto(????);
     }
 
+
+    public Funcionario funcionarioLivre(){
+        for (Funcionario f:funcionarios ) {
+            if (!f.getOcupado()) {// verificar se funcionario esta disponivel
+                return f;
+            }
+        }
+        return null;
+    }
     /*Assumir que ja esta na ponta da fila*/
 
     public void realizaAcao(){
         if(!filaEventos.isEmpty()){
-            Veiculo aux = filaEventos.peek();
-            Funcionario funcAux = null;
-            for (Funcionario f:funcionarios ) {
-                if(!f.getOcupado()){// verificar se funcionario esta disponivel
-                    funcAux = f;
-                }
+            Veiculo atendendo = filaEventos.peek();
+            Funcionario funcAux = funcionarioLivre(); /*Verificando se ha funcionario livre*/
+            if(funcAux != null){
+                atendendo.setTempoNoPosto(geraValorRandom(funcAux.getTempoAtendimento()));
+                funcAux.setOcupado(true);
+            /*Faz o restante do Atendimento*/
             }
 
 
-
-
-
+        }else{
+            System.out.println("Simulacao Finalizada");
         }
     }
 

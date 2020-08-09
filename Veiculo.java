@@ -49,5 +49,5 @@ class Veiculo{
 
     public double getTempoNoPosto() { return tempoNoPosto; }
 
-    public void setTempoNoPosto(double tempoNoPosto) { this.tempoNoPosto = tempoNoPosto; }
+    public void setTempoNoPosto(double tempoNoPosto) { this.tempoNoPosto += tempoNoPosto; }
 }
