@@ -9,8 +9,8 @@ public class FuncNovato extends Funcionario {
 
 
     @Override
-    public int getTempoAtendimento(){
-        return 90;
+    public double getTempoAtendimento(){
+        return super() +  90;
     }
 
 }

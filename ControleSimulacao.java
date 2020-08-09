@@ -15,7 +15,7 @@ public class ControleSimulacao  {
     private static double tempo_Global;
     private final Random random;
     private Queue<Veiculo> filaEventos;
-    private ArrayList<Funcionario> funcionarios;
+    private ArrayList<Funcionario> funcionarios; /*precisa de alguma lista pra guardar cada atendimento do funcionario*/
 
     ControleSimulacao(){
             tempo_Global = 0;
@@ -68,8 +68,9 @@ public class ControleSimulacao  {
                 atendendo.setTempoNoPosto(geraValorRandom(funcAux.getTempoAtendimento()));
                 funcAux.setOcupado(true);
             /*Faz o restante do Atendimento*/
+            }else{
+                //aguarda
             }
-
 
         }else{
             System.out.println("Simulacao Finalizada");

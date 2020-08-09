@@ -29,11 +29,10 @@
     <list default="true" id="8c0e13b6-3fa0-4bd8-a655-3fd241bca5cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControleSimulacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ControleSimulacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EstatisticaSimulacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/EstatisticaSimulacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FuncExperiente.java" beforeDir="false" afterPath="$PROJECT_DIR$/FuncExperiente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FuncNovato.java" beforeDir="false" afterPath="$PROJECT_DIR$/FuncNovato.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Funcionario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Simulacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Veiculo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

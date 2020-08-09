@@ -13,7 +13,7 @@ public class FuncExperiente extends Funcionario {
     }
 
     @Override
-    public int getTempoAtendimento(){
+    public double getTempoAtendimento(){
         return 30;
     }
 }
