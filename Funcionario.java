@@ -5,7 +5,6 @@ Verificar se os funcionarios nao tem atributos propriose
 public class Funcionario {
     private String nome;
     private String cpf;
-    private int idade;
     private String dataAdmissao;
     /*Atributos simulacao*/
     private boolean ocupado;
@@ -15,7 +14,7 @@ public class Funcionario {
     public Funcionario(String nome, String cpf, int idade, String dataAdmissao) {
         this.nome=nome;
         this.cpf=cpf;
-        this.idade = idade;
+
         this.dataAdmissao = dataAdmissao;
         ocupado = false;
         tempoFuncionario = 0;
@@ -24,9 +23,6 @@ public class Funcionario {
 
     public String getDataAdmissao() {
         return dataAdmissao;
-    }
-    public int getIdade() {
-        return idade;
     }
     public String getCpf() {
         return cpf;

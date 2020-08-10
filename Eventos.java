@@ -1,13 +1,11 @@
 public abstract class Eventos {
 
-    public abstract void abastecer();
+    public abstract void chegadaPosto();
 
-    public abstract void calibrarPneu();
-
-    public abstract void trocarOleo();
-
-    public abstract void entradaPosto();
+    public abstract void permanenciaPosto();
 
     public abstract void saidaPosto();
+
+
     
 }
