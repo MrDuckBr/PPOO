@@ -1,4 +1,4 @@
-class Veiculo{
+class Veiculo implements Comparable<Veiculo>{
     private int capTanque;
     private int qtdPneu;
     private String modelo;
@@ -28,7 +28,7 @@ class Veiculo{
         return qtdPneu;
     }
 
-   
+        //tempo pode ser abstrato ?????
 
     public String getModelo(){
         return modelo;
@@ -47,4 +47,14 @@ class Veiculo{
     public double getTempoNoPosto() { return tempoNoPosto; }
 
     public void setTempoNoPosto(double tempoNoPosto) { this.tempoNoPosto += tempoNoPosto; }
+
+
+    @Override
+    public int compareTo(Veiculo o) {
+        if(o.getTempoNoPosto() == getTempoNoPosto()){
+            return 0;
+        }else if(o.getTempoNoPosto() < getTempoNoPosto()){
+            return 1;
+        }else return -1;
+    }
 }
