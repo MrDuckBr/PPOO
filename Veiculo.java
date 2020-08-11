@@ -2,14 +2,13 @@ class Veiculo implements Comparable<Veiculo>{
     private int capTanque;
     private int qtdPneu;
     private String modelo;
-    private int anoFabricacao;
+    private String anoFabricacao;
     private String tipoCombustivel;
     private double tempoChegadaVeiculo;
     private double tempoNoPosto;
 
 
-    Veiculo(int capTanque, int qtdPneu ,
-    String modelo, int anoFabricacao , String tipoCombustivel){
+    Veiculo(int capTanque, int qtdPneu , String modelo, String anoFabricacao , String tipoCombustivel){
         this.capTanque = capTanque;
         this.qtdPneu = qtdPneu;
 
@@ -34,7 +33,7 @@ class Veiculo implements Comparable<Veiculo>{
         return modelo;
     }
 
-    public int getAnoFabricaco(){
+    public String getAnoFabricaco(){
         return anoFabricacao;
     }
 

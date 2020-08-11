@@ -3,33 +3,23 @@ Verificar se os funcionarios nao tem atributos propriose
 */
 
 public class Funcionario {
-    private String nome;
-    private String cpf;
-    private String dataAdmissao;
+    static int contador = 0;
     /*Atributos simulacao*/
     private boolean ocupado;
     private double tempoFuncionario;
+    int idFunc = 0;
 
 
-    public Funcionario(String nome, String cpf, int idade, String dataAdmissao) {
-        this.nome=nome;
-        this.cpf=cpf;
+    public Funcionario() {
+        idFunc = contador;
 
-        this.dataAdmissao = dataAdmissao;
         ocupado = false;
         tempoFuncionario = 0;
+        contador++;
 
     }
 
-    public String getDataAdmissao() {
-        return dataAdmissao;
-    }
-    public String getCpf() {
-        return cpf;
-    }
-    public String getNome() {
-        return nome;
-    }
+    public int getIdFunc(){return idFunc;}
 
     public boolean getOcupado(){
         return  ocupado;

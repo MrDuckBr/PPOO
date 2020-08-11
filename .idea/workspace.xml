@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d2bea6a-1908-4c38-9622-d1341c14eafc" name="Default Changelist" comment="">
+    <list default="true" id="e7d322ff-77d9-43d6-8be4-bc496ab25446" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Tales_Ribeiro.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/PermanenciaPosto.java" beforeDir="false" afterPath="$PROJECT_DIR$/PermanenciaPosto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SaidaPosto.java" beforeDir="false" afterPath="$PROJECT_DIR$/SaidaPosto.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/AcessoDeDados.java" beforeDir="false" afterPath="$PROJECT_DIR$/AcessoDeDados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FuncAlcool.java" beforeDir="false" afterPath="$PROJECT_DIR$/FuncAlcool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FuncDiesel.java" beforeDir="false" afterPath="$PROJECT_DIR$/FuncDiesel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FuncGasolina.java" beforeDir="false" afterPath="$PROJECT_DIR$/FuncGasolina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Funcionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Veiculo.java" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -37,54 +33,73 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1fvp7jdp5jM9kESV8zBIyZcN9fI" />
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1fw7kU78cxl3XxnFxLkGYxG7uwf" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/IntelliJ.Portuguese.Brazil.Dictionary-master/IntelliJ.Portuguese.Brazil.Dictionary-master/portuguese-brazil_without-accents.dic" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="4" Folder0="C:\Users\Tales Ribeiro\Downloads\IntelliJ.Portuguese.Brazil.Dictionary-master\IntelliJ.Portuguese.Brazil.Dictionary-master" Folder1="C:\Users\Tales Ribeiro\Downloads\IntelliJ.Portuguese.Brazil.Dictionary-master\IntelliJ.Portuguese.Brazil.Dictionary-master" Folder2="C:\Users\Tales Ribeiro\Downloads\IntelliJ.Portuguese.Brazil.Dictionary-master\IntelliJ.Portuguese.Brazil.Dictionary-master" Folder3="C:\Users\Tales Ribeiro\Downloads\IntelliJ.Portuguese.Brazil.Dictionary-master\IntelliJ.Portuguese.Brazil.Dictionary-master" CustomDictionaries="4" CustomDictionary0="C:\Users\Tales Ribeiro\Downloads\IntelliJ.Portuguese.Brazil.Dictionary-master\IntelliJ.Portuguese.Brazil.Dictionary-master\portuguese-brazil.dic" CustomDictionary1="C:\Users\Tales Ribeiro\Downloads\IntelliJ.Portuguese.Brazil.Dictionary-master\IntelliJ.Portuguese.Brazil.Dictionary-master\portuguese-brazil_technical-terms.dic" CustomDictionary2="C:\Users\Tales Ribeiro\Downloads\IntelliJ.Portuguese.Brazil.Dictionary-master\IntelliJ.Portuguese.Brazil.Dictionary-master\portuguese-brazil_technical-terms_without-accents.dic" CustomDictionary3="C:\Users\Tales Ribeiro\Downloads\IntelliJ.Portuguese.Brazil.Dictionary-master\IntelliJ.Portuguese.Brazil.Dictionary-master\portuguese-brazil_without-accents.dic" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="project-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1d2bea6a-1908-4c38-9622-d1341c14eafc" name="Default Changelist" comment="" />
-      <created>1597108258797</created>
+      <changelist id="e7d322ff-77d9-43d6-8be4-bc496ab25446" name="Default Changelist" comment="" />
+      <created>1597117443335</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1597108258797</updated>
+      <updated>1597117443335</updated>
+      <workItem from="1597117446000" duration="879000" />
+      <workItem from="1597145821347" duration="3096000" />
+      <workItem from="1597174531918" duration="1200000" />
     </task>
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< Updated upstream
     <state x="519" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1597116305772">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
     <state x="519" y="90" key="#com.intellij.ide.util.MemberChooser/62.0.1304.768@62.0.1304.768" timestamp="1597116305772" />
     <state x="509" y="131" key="refactoring.ChangeSignatureDialog" timestamp="1597112663582">
       <screen x="62" y="0" width="1304" height="768" />
+=======
+    <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1597170989249">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="509" y="131" key="refactoring.ChangeSignatureDialog/62.0.1304.768@62.0.1304.768" timestamp="1597112663582" />
-    <state x="370" y="172" key="run.anything.popup" timestamp="1597113406450">
-      <screen x="62" y="0" width="1304" height="768" />
+    <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/-1366.207.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1597170989249" />
+    <state x="540" y="175" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor" timestamp="1597170986991">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="370" y="172" key="run.anything.popup/62.0.1304.768@62.0.1304.768" timestamp="1597113406450" />
+    <state x="540" y="175" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/-1366.207.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1597170986991" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1597170963207">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/-1366.207.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1597170963207" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1597170964860">
+      <screen x="0" y="0" width="1920" height="1040" />
+>>>>>>> Stashed changes
+    </state>
+    <state x="461" y="162" key="SettingsEditor/-1366.207.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1597170964860" />
+    <state x="547" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597165170441">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1366.207.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1597117587578" />
+    <state x="547" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1597165170441" />
   </component>
 </project>
