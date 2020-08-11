@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1d2bea6a-1908-4c38-9622-d1341c14eafc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChegadaPosto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChegadaPosto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FuncDiesel.java" beforeDir="false" afterPath="$PROJECT_DIR$/FuncDiesel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PermanenciaPosto.java" beforeDir="false" afterPath="$PROJECT_DIR$/PermanenciaPosto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SaidaPosto.java" beforeDir="false" afterPath="$PROJECT_DIR$/SaidaPosto.java" afterDir="false" />
     </list>
@@ -76,10 +74,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="519" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1597113372379">
+    <state x="519" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1597116305772">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state x="519" y="90" key="#com.intellij.ide.util.MemberChooser/62.0.1304.768@62.0.1304.768" timestamp="1597113372379" />
+    <state x="519" y="90" key="#com.intellij.ide.util.MemberChooser/62.0.1304.768@62.0.1304.768" timestamp="1597116305772" />
     <state x="509" y="131" key="refactoring.ChangeSignatureDialog" timestamp="1597112663582">
       <screen x="62" y="0" width="1304" height="768" />
     </state>

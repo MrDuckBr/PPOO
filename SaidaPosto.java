@@ -1,37 +1,30 @@
 import java.util.ArrayList;
 
 public class SaidaPosto extends Eventos {
-    private ArrayList<Veiculo> sairam;
+    private double tempo[];
 
 
-    SaidaPosto(){
-        sairam = new ArrayList<>();
-    }
-
-    public void saidaPostoValores(Veiculo v){
-        sairam.add(v);
-    }
-
-    public double mediaTempo(){
-        double media=0;
-        for (Veiculo v:sairam) {
-            media += v.getTempoNoPosto();
-        }
-        return  media;
+    SaidaPosto(int tam){
+        tempo = new double[tam];
     }
 
     @Override
-    public double calculaTempo() {
-        return 0;
+    public double calculaTempo() { // chegada mais tempo atendimento
+
     }
 
     @Override
     public String tipoEvento() {
-        return null;
+        return "Saida";
     }
 
     @Override
     public double getTempoEvento() {
-        return 0;
+
+    }
+
+    @Override
+    public Veiculo getVeiculo(String nome) {
+        return null;
     }
 }

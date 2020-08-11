@@ -1,15 +1,13 @@
 import java.util.ArrayList;
 
-    public class PermanenciaPosto extends Eventos{
-        ArrayList<Veiculo> permanece = new ArrayList<>();
+public class PermanenciaPosto extends Eventos{
+    ArrayList<Veiculo> permanece = new ArrayList<>();
 
 
     public void setTempoPosto(){
         /*
          * Adiciona o tempo que o carro fica no posto , verificar como sera feita
-         */
-
-    }
+         */}
 
         @Override
         public double calculaTempo() {
@@ -22,7 +20,7 @@ import java.util.ArrayList;
         }
 
         @Override
-        public double getTempoEvento() {
+        public double getTempoEvento() { // randomico que puxa do funcionario
             return 0;
         }
 
@@ -31,3 +29,9 @@ import java.util.ArrayList;
             return null;
         }
     }
+
+
+    quando eu estou sendo atendido oque eu precis ????
+
+    tempo em que comecei a ser atendido
+    tempo que demora pra eu terminar de ser atendido
