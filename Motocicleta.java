@@ -1,8 +1,7 @@
 public class Motocicleta extends Veiculo {
     private int marcha;
-    Motocicleta(int capTanque, int qtdPneu, String marca, String modelo, int anoFabricacao, String tipoCombustivel, int marcha) {
-        super(capTanque, qtdPneu, modelo, anoFabricacao, tipoCombustivel);
-        this.marcha = marcha;
+    Motocicleta(int tempoChegadaVeiculo, int capTanque, int qtdPneu, String modelo, String anoFabricacao, String tipoCombustivel) {
+        super(tempoChegadaVeiculo, capTanque, qtdPneu, modelo, anoFabricacao, tipoCombustivel);
     }
     
     public int getMarcha(){

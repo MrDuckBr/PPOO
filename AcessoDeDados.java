@@ -44,10 +44,23 @@ public class AcessoDeDados {
             String estrategiaAtendimento = arq.readLine(); //pega string com estrategia de etendimento
 
             String entidade = arq.readLine();
-
+            //valores inseridos corretamente em suas devidas classes (Carro, Motocicleta e Caminhao)!!!!!!!
             do {
                 String[] divide = entidade.split(",");
-                v.add(new Veiculo(Integer.parseInt(divide[2]), Integer.parseInt(divide[3]), divide[4], divide[5],  divide[6])); //capTanque, qtdPneus, modelo, ano, tipoCombustivel
+                switch (divide[1]) {
+                    case "Carro":
+                        v.add(new Carro(Integer.parseInt(divide[0]), Integer.parseInt(divide[2]), Integer.parseInt(divide[3]), divide[4], divide[5], divide[6])); //tempoChegada, capTanque, qtdPneus, modelo, ano, tipoCombustivel
+                        break;
+                    case "Motocicleta":
+                        v.add(new Motocicleta(Integer.parseInt(divide[0]), Integer.parseInt(divide[2]), Integer.parseInt(divide[3]), divide[4], divide[5], divide[6]));
+                        break;
+                    case "Caminhao":
+                        v.add(new Caminhao(Integer.parseInt(divide[0]), Integer.parseInt(divide[2]), Integer.parseInt(divide[3]), divide[4], divide[5], divide[6]));
+                        break;
+                    default:
+                        System.out.println("Não foi possível identificar o tipo de veículo");
+                        break;
+                }
                 entidade = arq.readLine();
             }while(entidade != null);
 

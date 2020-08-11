@@ -8,14 +8,15 @@ class Veiculo implements Comparable<Veiculo>{
     private double tempoNoPosto;
 
 
-    Veiculo(int capTanque, int qtdPneu , String modelo, String anoFabricacao , String tipoCombustivel){
+    Veiculo(int tempoChegadaVeiculo, int capTanque, int qtdPneu , String modelo, String anoFabricacao , String tipoCombustivel){
+
+        this.tempoChegadaVeiculo = tempoChegadaVeiculo;
         this.capTanque = capTanque;
         this.qtdPneu = qtdPneu;
 
         this.modelo = modelo;
         this.anoFabricacao = anoFabricacao;
         this.tipoCombustivel = tipoCombustivel;
-        tempoChegadaVeiculo = 0;
         tempoNoPosto = 0;
     }
 
