@@ -4,82 +4,75 @@ import java.util.Queue;
 import java.util.Random;
 
 public class ControleSimulacao  {
-    /*
-     * Controlar a simulacao de evento discreto
-     * -adicao na fila
-     * -calculo aleatorio de tempo
-     * -saida da fila
-     * -insercao com base no tempo em que esta acontecendo tudo
-     *
-     * */
+
     private static double tempo_Global;
     private final Random random;
-    private Queue<Veiculo> filaEventos;
-    private ArrayList<Funcionario> funcionarios; /*precisa de alguma lista pra guardar cada atendimento do funcionario*/
+    private ArrayList<Veiculo> filaEventos;
+    private ArrayList<Funcionario> funcionarios;
+    // private ArrayList<Funcionario> funcionarios; /*precisa de alguma lista pra guardar cada atendimento do funcionario*/
 
     ControleSimulacao(){
         tempo_Global = 0;
         random = new Random();
-        filaEventos = new LinkedList<>();
-        funcionarios = new ArrayList<>();
+
+        // funcionarios = new ArrayList<>();
     }
 
-    /*
-     * O Veiculo chega ao posto , tempo de chegada adicionado, verifica se ha
-     * frentistas disponiveis , se tiver , vou a ele, se nao tiver , aguardo, quando liberar a acao que ele esta
-     * desejando eu vou a ela , adicionando um tempo aleatorio de espera para o usuario, por fim quando terminar
-     * adiciono o tempo de saida e entao finalizo o programa para aquele objeto
-     *
-     * */
+/*
 
-    public double getTempo_Global(){
-        return tempo_Global;
+ 0 - Array list ordenado da chegada     OK
+
+* 1 - Pega o primeirop e atualiza o tempo global ACHO QUE OK
+*
+* 2 - Verifica disponibilidade dos funcionarios ok
+* Novato  - experiente
+*
+* 3 - gera o tempo aleatorio do funcionario
+*
+* 4 - Adiciono o tempoo no veiculo (PERMANENCIA achooooo)
+*
+*
+*  5- Movo para a saida
+* */
+
+    private void setTempo_Global(double valor){
+        tempo_Global = valor;
     }
 
-    /*Retorna o tempo de algo usando o multiplicador*/
-    public double geraValorRandom(double multiplicador){
-        return random.nextDouble() * multiplicador;
+    public void setArrayChegadaVeiculos(ArrayList<Veiculo> array){
+        filaEventos = array;
     }
-    /*Adiciona o tempo em que o objeto chegou ao posto , aleatorio pois nao se sabe exatamente a hora da chegada*/
-    public void tempoDeChegadaPosto(Veiculo veiculo){
-        veiculo.setTempoChegadaVeiculo(random.nextInt());
-    }
-    /*Adiciona o tempo gasto em cada acao , para cada objeto*/
-    public void setTempoObjeto(Veiculo veiculo){
-        //veiculo.setTempoNoPosto(????);
+
+    public void getArrayFuncionarios(ArrayList<Funcionario> func){
+        funcionarios = func;
     }
 
 
-    public Funcionario funcionarioLivre(){
-        for (Funcionario f:funcionarios ) {
-            if (!f.getOcupado()) {// verificar se funcionario esta disponivel
-                return f;
+    public void atualizaTempoGlobal(){ /* Se o primeiro for atendido ele tem que sair da fila , senao nao funciona*/
+        Veiculo veiculo = filaEventos.get(0);
+        if(veiculo.getTempoNoPosto() >= tempo_Global){
+            setTempo_Global(veiculo.getTempoNoPosto());
+        }
+    }
+
+    public Funcionario disponibilidadeFuncionario(){
+        for(Funcionario f : funcionarios){
+            if(!f.getOcupado()){
+                return  f;
             }
         }
         return null;
     }
-    /*Assumir que ja esta na ponta da fila*/
 
-    public void realizaAcao(){
-        if(!filaEventos.isEmpty()){
-            Veiculo atendendo = filaEventos.peek();
-            Funcionario funcAux = funcionarioLivre(); /*Verificando se ha funcionario livre*/
-            if(funcAux != null){
-                atendendo.setTempoNoPosto(geraValorRandom(funcAux.getTempoAtendimento()));
-                funcAux.setOcupado(true);
-                /*Faz o restante do Atendimento*/
-            }else{
-                //aguarda
-            }
 
-        }else{
-            System.out.println("Simulacao Finalizada");
+    public double geraTempoFuncionario(){
+        Funcionario f = disponibilidadeFuncionario();
+        if(f != null){
+            return f.getTempoAtendimento() + random.nextDouble() * 10; // confirmar;
+        }else {
+            System.out.println("Nao ha funcionarios disponiveis"); // adicionar tratamento de excecao
         }
     }
-
-
-
-
 
 
 
