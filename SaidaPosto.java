@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class SaidaPosto {
+public class SaidaPosto extends Eventos {
     private ArrayList<Veiculo> sairam;
 
 
@@ -18,5 +18,10 @@ public class SaidaPosto {
             media += v.getTempoNoPosto();
         }
         return  media;
+    }
+
+    @Override
+    public void calculaTempo() {
+
     }
 }

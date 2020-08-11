@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-    public class PermanenciaPosto{
+    public class PermanenciaPosto extends Eventos{
         ArrayList<Veiculo> permanece = new ArrayList<>();
 
 
@@ -11,4 +11,8 @@ import java.util.ArrayList;
 
     }
 
-}
+        @Override
+        public void calculaTempo() {
+
+        }
+    }

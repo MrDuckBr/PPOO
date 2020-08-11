@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ChegadaPosto  {
+public class ChegadaPosto extends Eventos {
     private ArrayList<Veiculo> listachegada;
     private Veiculo veiculo;
 
@@ -19,5 +19,8 @@ public class ChegadaPosto  {
     }
 
 
+    @Override
+    public void calculaTempo() {
 
+    }
 }

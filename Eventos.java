@@ -1,11 +1,11 @@
 public abstract class Eventos {
 
-    public abstract void chegadaPosto();
+    public abstract void calculaTempo();
 
-    public abstract void permanenciaPosto();
+   // public abstract void permanenciaPosto();
 
-    public abstract void saidaPosto();
-
-
+//    public abstract void saidaPosto();
+//
+//
     
 }
