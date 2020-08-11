@@ -6,8 +6,8 @@
 * */
 
 
-public class FuncExperiente extends Funcionario {
-    FuncExperiente(String nome, String cpf, int idade, String dataAdmissao){
+public class FuncGasolina extends Funcionario {
+    FuncGasolina(String nome, String cpf, int idade, String dataAdmissao){
         super(nome, cpf, idade, dataAdmissao);
          //tempo para realizar uma ação
     }

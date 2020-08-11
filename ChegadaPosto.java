@@ -3,24 +3,40 @@ import java.util.Collections;
 
 public class ChegadaPosto extends Eventos {
     private ArrayList<Veiculo> listachegada;
+    private int vetorTempo[];
     private Veiculo veiculo;
 
-    ChegadaPosto(){
-        listachegada = new ArrayList<>();
+    ChegadaPosto(ArrayList<Veiculo> array, int[] vetor){
+        listachegada = array;
+        this.vetorTempo = vetor;
+        ordenaLista(listachegada);
     }
 
-    public void adicionaListaChegada(Veiculo veiculo){
-        listachegada.add(veiculo);
+    private void ordenaLista(ArrayList<Veiculo> listachegada){
         Collections.sort(listachegada);
     }
 
     public Veiculo getVeiculo(){
-        return listachegada.get(0);
+        return listachegada.remove(0);
     }
 
 
     @Override
-    public void calculaTempo() {
+    public double calculaTempo() { // NAO SEI SE FUNCIONA
+        int cont =0;
+        for(Veiculo v: listachegada){
+            v.setTempoChegadaVeiculo(vetorTempo[cont]);
+            cont++;
+        }
+    }
 
+    @Override
+    public String tipoEvento() {
+        return "Chegada";
+    }
+
+    @Override
+    public double getTempoEvento() {
+        return 0;
     }
 }
