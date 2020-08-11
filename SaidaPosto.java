@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class SaidaPosto extends Eventos {
     private double tempo[];
+    private int cont= 0;
 
 
     SaidaPosto(int tam){

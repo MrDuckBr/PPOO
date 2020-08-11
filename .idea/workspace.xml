@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <list default="true" id="e7d322ff-77d9-43d6-8be4-bc496ab25446" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Tales_Ribeiro.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/PermanenciaPosto.java" beforeDir="false" afterPath="$PROJECT_DIR$/PermanenciaPosto.java" afterDir="false" />
+=======
+    <list default="true" id="1d2bea6a-1908-4c38-9622-d1341c14eafc" name="Default Changelist" comment="">
+>>>>>>> Stashed changes
+=======
+    <list default="true" id="1d2bea6a-1908-4c38-9622-d1341c14eafc" name="Default Changelist" comment="">
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/SaidaPosto.java" beforeDir="false" afterPath="$PROJECT_DIR$/SaidaPosto.java" afterDir="false" />
 =======
       <change beforePath="$PROJECT_DIR$/AcessoDeDados.java" beforeDir="false" afterPath="$PROJECT_DIR$/AcessoDeDados.java" afterDir="false" />
@@ -67,8 +75,25 @@
     </task>
     <servers />
   </component>
+<<<<<<< Updated upstream
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+=======
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   </component>
   <component name="WindowStateProjectService">
 <<<<<<< Updated upstream
