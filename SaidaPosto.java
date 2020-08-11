@@ -21,7 +21,17 @@ public class SaidaPosto extends Eventos {
     }
 
     @Override
-    public void calculaTempo() {
+    public double calculaTempo() {
+        return 0;
+    }
 
+    @Override
+    public String tipoEvento() {
+        return null;
+    }
+
+    @Override
+    public double getTempoEvento() {
+        return 0;
     }
 }

@@ -10,7 +10,7 @@ public class FuncDiesel extends Funcionario {
 
     @Override
     public double getTempoAtendimento(){
-        return super() +  90;
+        return super().toString +  90;
     }
 
 }

@@ -8,6 +8,8 @@ public abstract class Eventos {
 
     public abstract double getTempoEvento();
 
+    public abstract Veiculo getVeiculo(String nome);
+
 
    // public abstract void permanenciaPosto();
 

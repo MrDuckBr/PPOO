@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class ChegadaPosto extends Eventos {
-    private ArrayList<Veiculo> listachegada;
-    private int vetorTempo[];
+    private final ArrayList<Veiculo> listachegada;
+    private final int[] vetorTempo;
     private Veiculo veiculo;
 
     ChegadaPosto(ArrayList<Veiculo> array, int[] vetor){
@@ -16,8 +16,13 @@ public class ChegadaPosto extends Eventos {
         Collections.sort(listachegada);
     }
 
-    public Veiculo getVeiculo(){
-        return listachegada.remove(0);
+    public Veiculo getVeiculo(String tipoCombustivel){
+        for(int i = 0 ; i < listachegada.size() ; i++){
+            if(tipoCombustivel.equals(listachegada.get(i).getTipoCombustivel())){
+                return listachegada.remove(i);
+            }
+        }
+        return null;
     }
 
 
@@ -28,6 +33,7 @@ public class ChegadaPosto extends Eventos {
             v.setTempoChegadaVeiculo(vetorTempo[cont]);
             cont++;
         }
+        return 0;
     }
 
     @Override

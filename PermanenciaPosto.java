@@ -12,7 +12,22 @@ import java.util.ArrayList;
     }
 
         @Override
-        public void calculaTempo() {
+        public double calculaTempo() {
+            return 0;
+        }
 
+        @Override
+        public String tipoEvento() {
+            return null;
+        }
+
+        @Override
+        public double getTempoEvento() {
+            return 0;
+        }
+
+        @Override
+        public Veiculo getVeiculo(String nome) {
+            return null;
         }
     }
