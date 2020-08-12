@@ -23,7 +23,7 @@ public class AcessoDeDados {
 
     public void lerArquivoTXT(String nomeArquivo) {
         try {
-            BufferedReader arq = new BufferedReader(new FileReader(nomeArquivo));
+            BufferedReader arq = new BufferedReader(new FileReader("nomeArquivo.txt"));
             String linha = arq.readLine();
             String[] campos = linha.split(",");
 

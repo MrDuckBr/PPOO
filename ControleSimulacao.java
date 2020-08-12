@@ -10,28 +10,34 @@ public class ControleSimulacao  {
     private ArrayList<Veiculo> filaEventos;
     private ArrayList<Funcionario> funcionarios;
     private  SaidaPosto saida;
+    private static ChegadaPosto chegadaPosto;
 
 
     ControleSimulacao(){
+        chegadaPosto = new ChegadaPosto();
         tempo_Global = 0;
         random = new Random();
         filaEventos = new ArrayList<>();
         funcionarios = new ArrayList<>();
         saida = new SaidaPosto();
+        iniciaDadosSimulacao();
     }
 
-
+    private void iniciaDadosSimulacao(){
+        setArrayChegadaVeiculos();
+        setArrayFuncionarios();
+    }
 
     private void setTempo_Global(double valor){
         tempo_Global = valor;
     }
 
-    public void setArrayChegadaVeiculos(ArrayList<Veiculo> array){
-        filaEventos.addAll(array);
+    public void setArrayChegadaVeiculos(){
+        filaEventos.addAll(chegadaPosto.getListaveiculos());
     }
 
-    public void getArrayFuncionarios(ArrayList<Funcionario> func){
-       funcionarios.addAll(func);
+    public void setArrayFuncionarios(){
+       funcionarios.addAll(chegadaPosto.getListaFuncionario());
     }
 
 

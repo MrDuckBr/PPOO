@@ -15,6 +15,14 @@ public class ChegadaPosto extends Eventos {
 
     }
 
+    public ArrayList<Veiculo> getListaveiculos(){
+        return listaveiculos;
+    }
+
+    public ArrayList<Funcionario> getListaFuncionario(){
+        return listaFuncionario;
+    }
+
     private void ordenaLista(ArrayList<Veiculo> listachegada){
         Collections.sort(listachegada);
     }
@@ -31,7 +39,7 @@ public class ChegadaPosto extends Eventos {
 
     @Override
     public double calculaTempo() { // NAO SEI SE FUNCIONA
-
+        //tempo global - tempo chegada
         return 0;
     }
 
