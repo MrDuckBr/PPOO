@@ -26,20 +26,16 @@ public class AcessoDeDados {
             String linha = arq.readLine();
             String[] campos = linha.split(",");
 
-            int nuFuncGasolina = Integer.parseInt(campos[0]); //pega numero de funcionarios por tipo
-            for (int i = 0; i < nuFuncGasolina; i++){
-                new FuncGasolina(); //funcionarios nao terao mais parametros (dados nao entram no txt. Possuem apenas um identificador)
+            int nuFuncsExperientes = Integer.parseInt(campos[0]); //pega numero de funcionarios por tipo
+            for (int i = 0; i < nuFuncsExperientes; i++){
+                new FuncExperiente(); //funcionarios nao terao mais parametros (dados nao entram no txt. Possuem apenas um identificador)
             }
 
-            int nuFuncAlcool = Integer.parseInt(campos[1]);
-            for (int i = 0; i < nuFuncAlcool; i++){
-                new FuncAlcool();
+            int nuFuncsNovatos = Integer.parseInt(campos[1]);
+            for (int i = 0; i < nuFuncsNovatos; i++){
+                new FuncNovato();
             }
 
-            int nuFuncDiesel = Integer.parseInt(campos[2]);
-            for (int i = 0; i < nuFuncDiesel; i++){
-                new FuncDiesel();
-            }
 
             String estrategiaAtendimento = arq.readLine(); //pega string com estrategia de etendimento
 

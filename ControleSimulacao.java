@@ -19,9 +19,7 @@ public class ControleSimulacao  {
     }
 
 /*
-
  0 - Array list ordenado da chegada     OK
-
 * 1 - Pega o primeirop e atualiza o tempo global ACHO QUE OK
 *
 * 2 - Verifica disponibilidade dos funcionarios ok
