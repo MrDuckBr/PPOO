@@ -32,12 +32,12 @@ public class AcessoDeDados {
 
             int nuFuncsExperientes = Integer.parseInt(campos[0]); //pega numero de funcionarios por tipo
             for (int i = 0; i < nuFuncsExperientes; i++){
-                new FuncExperiente(); //funcionarios nao terao mais parametros (dados nao entram no txt. Possuem apenas um identificador)
+                f.add(new FuncExperiente()); //funcionarios nao terao mais parametros (dados nao entram no txt. Possuem apenas um identificador)
             }
 
             int nuFuncsNovatos = Integer.parseInt(campos[1]);
             for (int i = 0; i < nuFuncsNovatos; i++){
-                new FuncNovato();
+                f.add(new FuncNovato());
             }
 
 

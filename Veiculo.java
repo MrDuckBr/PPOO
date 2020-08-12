@@ -53,10 +53,10 @@ class Veiculo implements Comparable<Veiculo>{
 
     @Override
     public int compareTo(Veiculo o) {
-        if(o.getTempoNoPosto() == getTempoNoPosto()){
-            return 0;
-        }else if(o.getTempoNoPosto() < getTempoNoPosto()){
+        if(o.getTempoChegadaVeiculo() == getTempoChegadaVeiculo()){
             return 1;
+        }else if(o.getTempoChegadaVeiculo() < getTempoChegadaVeiculo()){
+            return 0;
         }else return -1;
     }
 }

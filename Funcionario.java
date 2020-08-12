@@ -12,7 +12,6 @@ public class Funcionario {
 
     public Funcionario() {
         idFunc = contador;
-
         ocupado = false;
         tempoFuncionario = 0;
         contador++;
