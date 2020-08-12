@@ -8,6 +8,7 @@ public class Funcionario {
     private boolean ocupado;
     private double tempoFuncionario;
     int idFunc = 0;
+    private double ocupadoAte;
 
 
     public Funcionario() {
@@ -15,6 +16,7 @@ public class Funcionario {
         ocupado = false;
         tempoFuncionario = 0;
         contador++;
+        ocupadoAte = 0;
 
     }
 
@@ -34,5 +36,12 @@ public class Funcionario {
 
     public void setTempoFuncionario(double valor){ tempoFuncionario = valor;}
 
+    public void setOcupadoAte(double valor){
+        ocupadoAte = valor;
+    }
+
+    public double getOcupadoAte(){
+        return ocupadoAte;
+    }
 
 }

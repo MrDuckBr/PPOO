@@ -38,7 +38,7 @@ public class ChegadaPosto extends Eventos {
 
 
     @Override
-    public double calculaTempo() { // NAO SEI SE FUNCIONA
+    public double calculaTempo() { //calcula tempo de espera na fila do veiculo
         //tempo global - tempo chegada
         return 0;
     }

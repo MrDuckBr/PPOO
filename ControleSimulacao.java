@@ -50,12 +50,14 @@ public class ControleSimulacao  {
             if (veiculo.getTempoNoPosto() + veiculo.getTempoChegadaVeiculo() > veiculo1.getTempoChegadaVeiculo()) {
                 //Ficar na espera de liberar um funcionario;
                 //calcular tempo de espera na fila
-                setTempo_Global(veiculo.getTempoNoPosto() + veiculo.getTempoChegadaVeiculo());
+                setTempo_Global( tempo_Global + veiculo1.getTempoChegadaVeiculo());
             }
 
-        }if(veiculo.getTempoChegadaVeiculo() >= tempo_Global){
-                setTempo_Global(veiculo.getTempoChegadaVeiculo());
-            }
+        }if(veiculo.getTempoChegadaVeiculo() <= tempo_Global){
+                setTempo_Global(tempo_Global + veiculo.getTempoNoPosto());
+        }if(veiculo.getTempoChegadaVeiculo() > tempo_Global){
+            setTempo_Global(tempo_Global + veiculo.getTempoChegadaVeiculo());
+        }
     }
 
     public Funcionario disponibilidadeFuncionario(){
@@ -76,7 +78,7 @@ public class ControleSimulacao  {
     }
 
     private void verFuncionarios(){
-        for(Funcionario f : funcionarios) System.out.print(f.getOcupado() + " ");
+        for(Funcionario f : funcionarios) System.out.println(f.getOcupado() + " ");
         for(Veiculo v : filaEventos) System.out.print(v.getTempoChegadaVeiculo() + " ");
         System.out.println(" ");
     }
@@ -84,18 +86,17 @@ public class ControleSimulacao  {
     public void geraTempoFuncionario(){
         Funcionario f = disponibilidadeFuncionario();
         if(f != null){
-          /*  if(f instanceof FuncNovato){
+            if(f instanceof FuncNovato){
                 FuncNovato fn = (FuncNovato)f;
                 f.setTempoFuncionario(random.nextDouble() * fn.geraAleatorioNovato());
             }else if(f instanceof FuncExperiente){
                 FuncExperiente fe = (FuncExperiente) f;
                 f.setTempoFuncionario(random.nextDouble() * fe.geraAleatorioExperiente());
             }
-            */
-           f.setTempoFuncionario(10);
-
-            System.out.println("Tempo Func " + f.getTempoFuncionario() );
+            System.out.println("Tempo Func " + f.getTempoFuncionario() + " Indice do Func" + f.getIdFunc() );
+            f.setOcupadoAte( filaEventos.get(0).getTempoChegadaVeiculo()+(f.getTempoFuncionario()));//ate quando o func estara ocupado
             filaEventos.get(0).setTempoNoPosto(f.getTempoFuncionario());
+            f.setOcupado(true);
             verFuncionarios();
             atualizaTempoGlobal();
 
@@ -103,12 +104,24 @@ public class ControleSimulacao  {
 
         }else {
             System.out.println("Nao ha funcionarios disponiveis"); // adicionar tratamento de excecao
+            Funcionario menorTempoFunc = funcionarios.get(0);
+            for(Funcionario p : funcionarios){
+                if(p.getOcupadoAte() <= menorTempoFunc.getOcupadoAte()){
+                    menorTempoFunc = p;
+                }
+            }
+            filaEventos.get(0).setTempoNoPosto(menorTempoFunc.getOcupadoAte() - filaEventos.get(0).getTempoChegadaVeiculo()); // vai comecar com o tempo de espera na fila7
+            menorTempoFunc.setOcupado(false);
+            atualizaTempoGlobal();
+            iniciaFilaEventos();
+
         }
     }
 
     public void terminaEvento(){
         saida.adicionaTempo(filaEventos.get(0).getTempoChegadaVeiculo() + filaEventos.get(0).getTempoNoPosto());
         filaEventos.remove(0);
+        System.out.println("Tempo global " + tempo_Global);
         iniciaFilaEventos();
     }
 
@@ -122,10 +135,10 @@ public class ControleSimulacao  {
 
     public void iniciaFilaEventos(){
         if(!verificaFila()){
-            System.out.println("Tempo global " + tempo_Global);
             geraTempoFuncionario();
+
         }else{
-            System.out.println("Tempo global " + tempo_Global);
+            //System.out.println("Tempo global " + tempo_Global);
             System.out.println("Fim da Simulacao");
             System.exit(0);
         }

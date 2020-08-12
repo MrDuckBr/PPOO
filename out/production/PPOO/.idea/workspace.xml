@@ -22,12 +22,6 @@
     <list default="true" id="7becc24d-b8e0-4aa9-a307-8e5a0b997b18" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControleSimulacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ControleSimulacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FuncExperiente.java" beforeDir="false" afterPath="$PROJECT_DIR$/FuncExperiente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FuncNovato.java" beforeDir="false" afterPath="$PROJECT_DIR$/FuncNovato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Funcionario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nomeArquivo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/nomeArquivo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PPOO/ControleSimulacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PPOO/ControleSimulacao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PPOO/nomeArquivo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PPOO/nomeArquivo.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,22 +89,38 @@
       <screen x="62" y="0" width="1304" height="768" />
     </state>
     <state x="494" y="138" key="FileChooserDialogImpl/62.0.1304.768@62.0.1304.768" timestamp="1597203686693" />
-    <state width="1261" height="149" key="GridCell.Tab.0.bottom" timestamp="1597251353260">
+    <state width="1261" height="423" key="GridCell.Tab.0.bottom" timestamp="1597252389436">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1261" height="149" key="GridCell.Tab.0.bottom/62.0.1304.768@62.0.1304.768" timestamp="1597251353260" />
-    <state width="1261" height="149" key="GridCell.Tab.0.center" timestamp="1597251353260">
+    <state width="1261" height="423" key="GridCell.Tab.0.bottom/62.0.1304.768@62.0.1304.768" timestamp="1597252389436" />
+    <state width="1261" height="423" key="GridCell.Tab.0.center" timestamp="1597252389436">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1261" height="149" key="GridCell.Tab.0.center/62.0.1304.768@62.0.1304.768" timestamp="1597251353260" />
-    <state width="1261" height="149" key="GridCell.Tab.0.left" timestamp="1597251353259">
+    <state width="1261" height="423" key="GridCell.Tab.0.center/62.0.1304.768@62.0.1304.768" timestamp="1597252389436" />
+    <state width="1261" height="423" key="GridCell.Tab.0.left" timestamp="1597252389436">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1261" height="149" key="GridCell.Tab.0.left/62.0.1304.768@62.0.1304.768" timestamp="1597251353259" />
-    <state width="1261" height="149" key="GridCell.Tab.0.right" timestamp="1597251353260">
+    <state width="1261" height="423" key="GridCell.Tab.0.left/62.0.1304.768@62.0.1304.768" timestamp="1597252389436" />
+    <state width="1261" height="423" key="GridCell.Tab.0.right" timestamp="1597252389436">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1261" height="149" key="GridCell.Tab.0.right/62.0.1304.768@62.0.1304.768" timestamp="1597251353260" />
+    <state width="1261" height="423" key="GridCell.Tab.0.right/62.0.1304.768@62.0.1304.768" timestamp="1597252389436" />
+    <state width="1261" height="239" key="GridCell.Tab.1.bottom" timestamp="1597251624681">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state width="1261" height="239" key="GridCell.Tab.1.bottom/62.0.1304.768@62.0.1304.768" timestamp="1597251624681" />
+    <state width="1261" height="239" key="GridCell.Tab.1.center" timestamp="1597251624680">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state width="1261" height="239" key="GridCell.Tab.1.center/62.0.1304.768@62.0.1304.768" timestamp="1597251624680" />
+    <state width="1261" height="239" key="GridCell.Tab.1.left" timestamp="1597251624680">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state width="1261" height="239" key="GridCell.Tab.1.left/62.0.1304.768@62.0.1304.768" timestamp="1597251624680" />
+    <state width="1261" height="239" key="GridCell.Tab.1.right" timestamp="1597251624680">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state width="1261" height="239" key="GridCell.Tab.1.right/62.0.1304.768@62.0.1304.768" timestamp="1597251624680" />
     <state x="154" y="92" width="1120" height="584" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1597188277061">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
