@@ -9,29 +9,16 @@ public class ControleSimulacao  {
     private final Random random;
     private ArrayList<Veiculo> filaEventos;
     private ArrayList<Funcionario> funcionarios;
-    // private ArrayList<Funcionario> funcionarios; /*precisa de alguma lista pra guardar cada atendimento do funcionario*/
+    private  SaidaPosto saida;
+
 
     ControleSimulacao(){
         tempo_Global = 0;
         random = new Random();
-
-        // funcionarios = new ArrayList<>();
+        saida = new SaidaPosto((int)filaEventos.size());
     }
 
-/*
- 0 - Array list ordenado da chegada     OK
-* 1 - Pega o primeirop e atualiza o tempo global ACHO QUE OK
-*
-* 2 - Verifica disponibilidade dos funcionarios ok
-* Novato  - experiente
-*
-* 3 - gera o tempo aleatorio do funcionario
-*
-* 4 - Adiciono o tempoo no veiculo (PERMANENCIA achooooo)
-*
-*
-*  5- Movo para a saida
-* */
+
 
     private void setTempo_Global(double valor){
         tempo_Global = valor;
@@ -52,6 +39,8 @@ public class ControleSimulacao  {
             Veiculo veiculo1 = filaEventos.get(1);
             if (veiculo.getTempoNoPosto() + veiculo.getTempoChegadaVeiculo() > veiculo1.getTempoChegadaVeiculo()) {
                 //Ficar na espera de liberar um funcionario;
+                //calcular tempo de espera na fila
+                setTempo_Global(veiculo.getTempoNoPosto() + veiculo.getTempoChegadaVeiculo());
             }
 
         }if(veiculo.getTempoNoPosto() >= tempo_Global){
@@ -75,6 +64,7 @@ public class ControleSimulacao  {
             f.setOcupado(true);
             filaEventos.get(0).setTempoNoPosto(f.getTempoAtendimento() + random.nextDouble() * 10); // confirmar;
             atualizaTempoGlobal();
+
         }else {
             System.out.println("Nao ha funcionarios disponiveis"); // adicionar tratamento de excecao
         }
@@ -93,18 +83,6 @@ public class ControleSimulacao  {
     }
 
 
-    verificar se tem alguem na fila
-    verifico se tem funcionario
-    tem -> atender
-    nao tem ->
 
-
-    /*
-     * Pegar o tempo de finalizacao do funcionario e adiconar como atendimento da fila do carro
-     * ou seja se eu to atendendo eu termino vejo se o carro ta la
-     * se tiver eu atendo e aquele tempo de chegada menos o tempo que esta atual e o tempo de espera na fial
-     *
-     *
-     * */
 
 }

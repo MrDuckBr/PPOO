@@ -37,9 +37,11 @@ public class ChegadaPosto extends Eventos {
     }
 
     @Override
-    public String tipoEvento() {
-        return "Chegada";
+    public String eventoAtual() {
+        return null;
     }
+
+
 
     @Override
     public double getTempoEvento() {

@@ -29,7 +29,7 @@ public class Funcionario {
         this.ocupado = ocupado;
     }
 
-    public double getTempoAtendimento(){
+    public  double getTempoAtendimento(){
         return  tempoFuncionario;
     }
 }

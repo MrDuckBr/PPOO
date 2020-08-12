@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class PermanenciaPosto extends Eventos{
+public  class PermanenciaPosto extends Eventos{
     ArrayList<Veiculo> permanece = new ArrayList<>();
 
 
@@ -14,10 +14,12 @@ public class PermanenciaPosto extends Eventos{
             return 0;
         }
 
-        @Override
-        public String tipoEvento() {
-            return null;
-        }
+    @Override
+    public String eventoAtual() {
+        return null;
+    }
+
+
 
         @Override
         public double getTempoEvento() { // randomico que puxa do funcionario
@@ -31,7 +33,4 @@ public class PermanenciaPosto extends Eventos{
     }
 
 
-    quando eu estou sendo atendido oque eu precis ????
 
-    tempo em que comecei a ser atendido
-    tempo que demora pra eu terminar de ser atendido

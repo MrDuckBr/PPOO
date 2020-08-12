@@ -9,19 +9,28 @@ public class SaidaPosto extends Eventos {
         tempo = new double[tam];
     }
 
+    public void adicionaTempo(double time){
+        tempo[cont] = time;
+        cont++;
+    }
+
+
+
     @Override
     public double calculaTempo() { // chegada mais tempo atendimento
-
+        return 0;
     }
 
     @Override
-    public String tipoEvento() {
-        return "Saida";
+    public String eventoAtual() {
+        return null;
     }
+
+
 
     @Override
     public double getTempoEvento() {
-
+        return 0;
     }
 
     @Override

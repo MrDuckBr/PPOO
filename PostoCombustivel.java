@@ -1,11 +1,11 @@
 public class PostoCombustivel{
-    private static ControleSimulacao ControleSimulacao;
+    private static ControleSimulacao controleSimulacao;
 
     public static void main(String[] args) {
 
         System.out.println("Bem vindo ao Posto Bomba!!");
-        ControleSimulacao = new ControleSimulacao();
-        //simulacao.start();
+        controleSimulacao = new ControleSimulacao();
+        controleSimulacao.iniciaFilaEventos();
         /* 
         Toda o programa ira rodar em simulacao 
          */
