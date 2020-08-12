@@ -50,9 +50,12 @@ public class ControleSimulacao  {
 
     public void atualizaTempoGlobal(){ /* Se o primeiro for atendido ele tem que sair da fila , senao nao funciona*/
         Veiculo veiculo = filaEventos.get(0);
-        if(veiculo.getTempoNoPosto() >= tempo_Global){
-            setTempo_Global(veiculo.getTempoNoPosto());
-        }
+        if(filaEventos.get(2) != null && disponibilidadeFuncionario() != null ){}
+        Veiculo veiculo1 = filaEventos.get(1);
+        if(veiculo.getTempoNoPosto() + veiculo.getTempoChegadaVeiculo() > veiculo1.getTempoChegadaVeiculo())
+            if(veiculo.getTempoNoPosto() >= tempo_Global){
+                setTempo_Global(veiculo.getTempoNoPosto());
+            }
     }
 
     public Funcionario disponibilidadeFuncionario(){
@@ -65,19 +68,42 @@ public class ControleSimulacao  {
     }
 
 
-    public double geraTempoFuncionario(){
+    public void geraTempoFuncionario(){
         Funcionario f = disponibilidadeFuncionario();
         if(f != null){
-            return f.getTempoAtendimento() + random.nextDouble() * 10; // confirmar;
+            f.setOcupado(true);
+            filaEventos.get(0).setTempoNoPosto(f.getTempoAtendimento() + random.nextDouble() * 10); // confirmar;
+            atualizaTempoGlobal();
         }else {
             System.out.println("Nao ha funcionarios disponiveis"); // adicionar tratamento de excecao
         }
     }
 
+    public boolean verificaFila(){
+        return filaEventos.isEmpty();
+    }
 
 
+    public void iniciaFilaEventos(){
+        if(!verificaFila()){
+            geraTempoFuncionario();
+
+        }
+    }
 
 
+    verificar se tem alguem na fila
+    verifico se tem funcionario
+    tem -> atender
+    nao tem ->
 
+
+    /*
+     * Pegar o tempo de finalizacao do funcionario e adiconar como atendimento da fila do carro
+     * ou seja se eu to atendendo eu termino vejo se o carro ta la
+     * se tiver eu atendo e aquele tempo de chegada menos o tempo que esta atual e o tempo de espera na fial
+     *
+     *
+     * */
 
 }

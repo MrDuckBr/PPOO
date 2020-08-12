@@ -44,6 +44,8 @@ class Veiculo implements Comparable<Veiculo>{
 
     public  void setTempoChegadaVeiculo(double valor){ this.tempoChegadaVeiculo = valor; }
 
+    public double getTempoChegadaVeiculo(){ return  tempoChegadaVeiculo; }
+
     public double getTempoNoPosto() { return tempoNoPosto; }
 
     public void setTempoNoPosto(double tempoNoPosto) { this.tempoNoPosto += tempoNoPosto; }
