@@ -1,5 +1,6 @@
-3,4
+1,1
 FIFO
 4,Carro,70,4,Fusca,1985,Gasolina
 7,Motocicleta,30,2,XJ,2019,Alcool
 1,Caminhao,120,6,Scania,2004,Diesel
+2,Caminhao,120,6,Scania,2004,Diesel

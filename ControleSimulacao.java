@@ -53,12 +53,13 @@ public class ControleSimulacao  {
                 setTempo_Global(veiculo.getTempoNoPosto() + veiculo.getTempoChegadaVeiculo());
             }
 
-        }if(veiculo.getTempoNoPosto() >= tempo_Global){
-                setTempo_Global(veiculo.getTempoNoPosto());
+        }if(veiculo.getTempoChegadaVeiculo() >= tempo_Global){
+                setTempo_Global(veiculo.getTempoChegadaVeiculo());
             }
     }
 
     public Funcionario disponibilidadeFuncionario(){
+        gerenciaFuncionario();
         for(Funcionario f : funcionarios){
             if(!f.getOcupado()){
                 return  f;
@@ -66,6 +67,14 @@ public class ControleSimulacao  {
         }
         return null;
     }
+    /**
+     * Atualiza o funcionario para ver se esta ocupado*/
+    public void gerenciaFuncionario(){
+        for(Funcionario f : funcionarios){
+            f.setOcupado(!(tempo_Global >= f.getTempoFuncionario()));
+        }
+    }
+
     private void verFuncionarios(){
         for(Funcionario f : funcionarios) System.out.print(f.getOcupado() + " ");
         for(Veiculo v : filaEventos) System.out.print(v.getTempoChegadaVeiculo() + " ");
@@ -75,12 +84,21 @@ public class ControleSimulacao  {
     public void geraTempoFuncionario(){
         Funcionario f = disponibilidadeFuncionario();
         if(f != null){
-            f.setOcupado(true);
-            //filaEventos.get(0).setTempoNoPosto(f.getTempoAtendimento() + random.nextDouble() * 10); // confirmar;
-            filaEventos.get(0).setTempoNoPosto(10.0);
+          /*  if(f instanceof FuncNovato){
+                FuncNovato fn = (FuncNovato)f;
+                f.setTempoFuncionario(random.nextDouble() * fn.geraAleatorioNovato());
+            }else if(f instanceof FuncExperiente){
+                FuncExperiente fe = (FuncExperiente) f;
+                f.setTempoFuncionario(random.nextDouble() * fe.geraAleatorioExperiente());
+            }
+            */
+           f.setTempoFuncionario(10);
+
+            System.out.println("Tempo Func " + f.getTempoFuncionario() );
+            filaEventos.get(0).setTempoNoPosto(f.getTempoFuncionario());
             verFuncionarios();
             atualizaTempoGlobal();
-            f.setOcupado(false);
+
             terminaEvento();
 
         }else {
@@ -95,6 +113,8 @@ public class ControleSimulacao  {
     }
 
 
+
+
     public boolean verificaFila(){
         return filaEventos.isEmpty();
     }
@@ -102,10 +122,12 @@ public class ControleSimulacao  {
 
     public void iniciaFilaEventos(){
         if(!verificaFila()){
-            System.out.println(tempo_Global);
+            System.out.println("Tempo global " + tempo_Global);
             geraTempoFuncionario();
         }else{
+            System.out.println("Tempo global " + tempo_Global);
             System.out.println("Fim da Simulacao");
+            System.exit(0);
         }
     }
 

@@ -32,7 +32,7 @@ public class EstatisticaSimulacao {
 
     public void calculaTempoFunc(ArrayList<Funcionario> func){
         for (Funcionario f:func){
-            tempoMedioFunc += f.getTempoAtendimento();
+            tempoMedioFunc += f.getTempoFuncionario();
         }
     }
 
