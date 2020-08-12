@@ -21,7 +21,10 @@ public class AcessoDeDados {
     private ArrayList<Funcionario> f = new ArrayList<>();
     private ArrayList<Veiculo> v = new ArrayList<>();
 
-    public void lerArquivoTXT(String nomeArquivo) {
+    public AcessoDeDados(){
+        lerArquivoTXT();
+    }
+    public void lerArquivoTXT() {
         try {
             BufferedReader arq = new BufferedReader(new FileReader("nomeArquivo.txt"));
             String linha = arq.readLine();
@@ -63,7 +66,7 @@ public class AcessoDeDados {
 
             arq.close();
         } catch (FileNotFoundException e) {
-            System.out.println("Impossível abrir o arquivo: " + nomeArquivo);
+            System.out.println("Impossível abrir o arquivo: " + "nomeArquivo");
 
         } catch (IOException e) {
             System.out.println("Problema na leitura do arquivo");
