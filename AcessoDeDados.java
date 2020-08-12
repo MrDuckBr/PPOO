@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.security.PublicKey;
 import java.util.ArrayList;
 
 /*
@@ -17,8 +18,8 @@ public class AcessoDeDados {
 
     //Leitura do arquivo texto que fara a leitura
     //Instanciação do Arraylist (temporario?)
-    ArrayList<Funcionario> f = new ArrayList<>();
-    ArrayList<Veiculo> v = new ArrayList<>();
+    private ArrayList<Funcionario> f = new ArrayList<>();
+    private ArrayList<Veiculo> v = new ArrayList<>();
 
     public void lerArquivoTXT(String nomeArquivo) {
         try {
@@ -67,6 +68,14 @@ public class AcessoDeDados {
         } catch (IOException e) {
             System.out.println("Problema na leitura do arquivo");
         }
+    }
+
+    public ArrayList<Funcionario> acessaDadosFuncionario(){
+        return f;
+    }
+
+    public ArrayList<Veiculo> acessaDadosVeiculo(){
+        return v;
     }
     
 }

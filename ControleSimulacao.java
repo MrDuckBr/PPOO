@@ -15,7 +15,9 @@ public class ControleSimulacao  {
     ControleSimulacao(){
         tempo_Global = 0;
         random = new Random();
-        saida = new SaidaPosto((int)filaEventos.size());
+        filaEventos = new ArrayList<>();
+        funcionarios = new ArrayList<>();
+        saida = new SaidaPosto();
     }
 
 
@@ -25,11 +27,11 @@ public class ControleSimulacao  {
     }
 
     public void setArrayChegadaVeiculos(ArrayList<Veiculo> array){
-        filaEventos = array;
+        filaEventos.addAll(array);
     }
 
     public void getArrayFuncionarios(ArrayList<Funcionario> func){
-        funcionarios = func;
+       funcionarios.addAll(func);
     }
 
 
@@ -64,11 +66,19 @@ public class ControleSimulacao  {
             f.setOcupado(true);
             filaEventos.get(0).setTempoNoPosto(f.getTempoAtendimento() + random.nextDouble() * 10); // confirmar;
             atualizaTempoGlobal();
-
+            terminaEvento();
+            f.setOcupado(false);
         }else {
             System.out.println("Nao ha funcionarios disponiveis"); // adicionar tratamento de excecao
         }
     }
+
+    public void terminaEvento(){
+        saida.adicionaTempo(filaEventos.get(0).getTempoChegadaVeiculo() + filaEventos.get(0).getTempoNoPosto());
+        filaEventos.remove(0);
+        iniciaFilaEventos();
+    }
+
 
     public boolean verificaFila(){
         return filaEventos.isEmpty();
@@ -78,7 +88,8 @@ public class ControleSimulacao  {
     public void iniciaFilaEventos(){
         if(!verificaFila()){
             geraTempoFuncionario();
-
+        }else{
+            System.out.println("Fim da Simulacao");
         }
     }
 

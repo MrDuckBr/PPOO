@@ -1,17 +1,17 @@
 import java.util.ArrayList;
 
 public class SaidaPosto extends Eventos {
-    private double tempo[];
-    private int cont= 0;
+    private ArrayList<Double> tempo;
 
 
-    SaidaPosto(int tam){
-        tempo = new double[tam];
+
+    SaidaPosto(){
+        tempo = new ArrayList<>();
     }
 
     public void adicionaTempo(double time){
-        tempo[cont] = time;
-        cont++;
+       tempo.add(time);
+
     }
 
 

@@ -2,14 +2,17 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class ChegadaPosto extends Eventos {
-    private final ArrayList<Veiculo> listachegada;
-    private final int[] vetorTempo;
+    private final AcessoDeDados acessoDeDados;
+    private final ArrayList<Veiculo> listaveiculos;
+    private final ArrayList<Funcionario> listaFuncionario;
     private Veiculo veiculo;
 
-    ChegadaPosto(ArrayList<Veiculo> array, int[] vetor){
-        listachegada = array;
-        this.vetorTempo = vetor;
-        ordenaLista(listachegada);
+    ChegadaPosto(){
+        acessoDeDados = new AcessoDeDados();
+        listaveiculos = acessoDeDados.acessaDadosVeiculo();
+        listaFuncionario = acessoDeDados.acessaDadosFuncionario();
+        ordenaLista(listaveiculos);
+
     }
 
     private void ordenaLista(ArrayList<Veiculo> listachegada){
@@ -17,9 +20,9 @@ public class ChegadaPosto extends Eventos {
     }
 
     public Veiculo getVeiculo(String tipoCombustivel){
-        for(int i = 0 ; i < listachegada.size() ; i++){
-            if(tipoCombustivel.equals(listachegada.get(i).getTipoCombustivel())){
-                return listachegada.remove(i);
+        for(int i = 0 ; i < listaveiculos.size() ; i++){
+            if(tipoCombustivel.equals(listaveiculos.get(i).getTipoCombustivel())){
+                return listaveiculos.remove(i);
             }
         }
         return null;
@@ -28,11 +31,7 @@ public class ChegadaPosto extends Eventos {
 
     @Override
     public double calculaTempo() { // NAO SEI SE FUNCIONA
-        int cont =0;
-        for(Veiculo v: listachegada){
-            v.setTempoChegadaVeiculo(vetorTempo[cont]);
-            cont++;
-        }
+
         return 0;
     }
 
