@@ -11,10 +11,11 @@ public class SaidaPosto extends Eventos {
 
     public void adicionaTempo(double time){
        tempo.add(time);
-
     }
 
-
+    public ArrayList<Double> teste(){
+        return tempo;
+    }
 
     @Override
     public double calculaTempo() { // chegada mais tempo atendimento

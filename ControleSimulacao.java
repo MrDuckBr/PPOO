@@ -11,10 +11,12 @@ public class ControleSimulacao  {
     private ArrayList<Funcionario> funcionarios;
     private  SaidaPosto saida;
     private static ChegadaPosto chegadaPosto;
+    private static EstatisticaSimulacao estatisticaSimulacao;
 
 
     ControleSimulacao(){
         chegadaPosto = new ChegadaPosto();
+        estatisticaSimulacao = new EstatisticaSimulacao();
         tempo_Global = 0;
         random = new Random();
         filaEventos = new ArrayList<>();
@@ -119,7 +121,7 @@ public class ControleSimulacao  {
     }
 
     public void terminaEvento(){
-        saida.adicionaTempo(filaEventos.get(0).getTempoChegadaVeiculo() + filaEventos.get(0).getTempoNoPosto());
+        saida.adicionaTempo( filaEventos.get(0).getTempoNoPosto());
         filaEventos.remove(0);
         System.out.println("Tempo global " + tempo_Global);
         iniciaFilaEventos();
@@ -135,14 +137,18 @@ public class ControleSimulacao  {
 
     public void iniciaFilaEventos(){
         if(!verificaFila()){
+
             geraTempoFuncionario();
 
         }else{
             //System.out.println("Tempo global " + tempo_Global);
             System.out.println("Fim da Simulacao");
-            System.exit(0);
+            estatisticaSimulacao.criarGraficoCliente(saida.teste());
+
+           // System.exit(0);
         }
     }
+
 
 
 

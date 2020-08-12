@@ -1,26 +1,31 @@
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
+
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Queue;
 
-public class EstatisticaSimulacao {
-//Classe que fara as estatisticas da simulacao para a averiguacao
-   //cliente por tempo
-
-
-    /*
-    * intervalo de confianca
-    *
-    * tempo medio de atendimento para cada cliente
-    *
-    * tempo medio de atendimento para cada funcionario
-    *
-    * tempo medio para cada funcao especifica
-    *
-    *
-    *
-    * */
+public class EstatisticaSimulacao extends JFrame {
 
     private double tempoMedioCliente;
     private double tempoMedioFunc;
+    private DefaultCategoryDataset barra;
+
+
+
+    EstatisticaSimulacao(){
+        barra = new DefaultCategoryDataset();
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setTitle("Posto De Combustivel");
+        setSize(700,500);
+        setLocationRelativeTo(null);
+        setVisible(true);
+
+    }
+
 
     public void calculaMediaClientes(Queue<Veiculo> lista){
         for (Veiculo f:lista) {
@@ -35,6 +40,22 @@ public class EstatisticaSimulacao {
             tempoMedioFunc += f.getTempoFuncionario();
         }
     }
+
+    public void criarGraficoCliente(ArrayList<Double> veiculos ){
+       for(int i = 0; i < veiculos.size() ; i++) {
+           barra.setValue(veiculos.get(i), Integer.toString(i+1), "");
+       }
+
+        JFreeChart grafico = ChartFactory.createBarChart("Posto Combustivel","Veiculos" , "Tempo no posto",barra, PlotOrientation.VERTICAL,true,true,false);
+
+        ChartPanel painel = new ChartPanel(grafico);
+        add(painel);
+
+
+    }
+
+
+
 
     /*Adicionar para cada funcionario ????*/
 
