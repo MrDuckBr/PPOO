@@ -23,7 +23,7 @@ public class SaidaPosto extends Eventos {
 
     @Override
     public String eventoAtual() {
-        return null;
+        return "Saida";
     }
 
 
