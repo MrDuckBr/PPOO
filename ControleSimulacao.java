@@ -46,12 +46,15 @@ public class ControleSimulacao  {
     }
 
 
-    public void atualizaTempoGlobal(){ /* Se o primeiro for atendido ele tem que sair da fila , senao nao funciona*/
+    public void atualizaTempoGlobal() { /* Se o primeiro for atendido ele tem que sair da fila , senao nao funciona*/
         Veiculo veiculo = filaEventos.get(0);
-        if(filaEventos.get(2) != null && disponibilidadeFuncionario() != null ){}
-        Veiculo veiculo1 = filaEventos.get(1);
-        if(veiculo.getTempoNoPosto() + veiculo.getTempoChegadaVeiculo() > veiculo1.getTempoChegadaVeiculo())
-            if(veiculo.getTempoNoPosto() >= tempo_Global){
+        if (filaEventos.get(2) != null && disponibilidadeFuncionario() == null) {
+            Veiculo veiculo1 = filaEventos.get(1);
+            if (veiculo.getTempoNoPosto() + veiculo.getTempoChegadaVeiculo() > veiculo1.getTempoChegadaVeiculo()) {
+                //Ficar na espera de liberar um funcionario;
+            }
+
+        }if(veiculo.getTempoNoPosto() >= tempo_Global){
                 setTempo_Global(veiculo.getTempoNoPosto());
             }
     }
