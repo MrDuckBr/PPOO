@@ -19,11 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7becc24d-b8e0-4aa9-a307-8e5a0b997b18" name="Default Changelist" comment="">
+    <list default="true" id="db9110b4-7dcc-4447-a4be-480945f54acd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControleSimulacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ControleSimulacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PostoCombustivel.java" beforeDir="false" afterPath="$PROJECT_DIR$/PostoCombustivel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PPOO/ControleSimulacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PPOO/ControleSimulacao.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +61,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7becc24d-b8e0-4aa9-a307-8e5a0b997b18" name="Default Changelist" comment="" />
+      <changelist id="db9110b4-7dcc-4447-a4be-480945f54acd" name="Default Changelist" comment="" />
       <created>1597187400476</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

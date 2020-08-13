@@ -194,9 +194,9 @@ public class ControleSimulacao  {
      *
      */
     public void geraDadosEstatiticos(){
-        estatisticaSimulacao.criarGraficoCliente(saida.teste());
+        estatisticaSimulacao.criarGraficoCliente(saida.permenciaVeiculos());
         estatisticaSimulacao.calculaMediaFuncionario(temposFuncionarios);
-        estatisticaSimulacao.calculaMediaClientes(saida.teste());
+        estatisticaSimulacao.calculaMediaClientes(saida.permenciaVeiculos());
         estatisticaSimulacao.mediasPosto();
     }
 
