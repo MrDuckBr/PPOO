@@ -1,5 +1,5 @@
-/**Classe controle simulacao que controla toda a simulacao do programa
- * @author Walisson Mendes
+/* Classe controle simulacao que controla toda a simulacao do programa
+  @author Walisson Mendes
  * @author Tales Ribeiro
  */
 

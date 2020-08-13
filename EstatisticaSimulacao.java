@@ -7,7 +7,6 @@ import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 import javax.swing.*;
 import java.util.ArrayList;
 
-
 /**
  * Classe que calcula as estatisticas do programa , estas que plotam um grafico e imprimem no console a media de
  * atendimento do veiculo e do funcionario;

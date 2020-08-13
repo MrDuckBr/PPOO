@@ -2,7 +2,6 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.security.PublicKey;
 import java.util.ArrayList;
 
 /*
@@ -16,8 +15,6 @@ Definir
 
 public class AcessoDeDados {
 
-    //Leitura do arquivo texto que fara a leitura
-    //Instanciação do Arraylist (temporario?)
     private ArrayList<Funcionario> f = new ArrayList<>();
     private ArrayList<Veiculo> v = new ArrayList<>();
 
@@ -38,13 +35,13 @@ public class AcessoDeDados {
      */
     public void lerArquivoTXT() {
         try {
-            BufferedReader arq = new BufferedReader(new FileReader("nomeArquivo.txt"));
+            BufferedReader arq = new BufferedReader(new FileReader("entradas.txt"));
             String linha = arq.readLine();
             String[] campos = linha.split(",");
 
-            int nuFuncsExperientes = Integer.parseInt(campos[0]); //pega numero de funcionarios por tipo
+            int nuFuncsExperientes = Integer.parseInt(campos[0]);
             for (int i = 0; i < nuFuncsExperientes; i++){
-                f.add(new FuncExperiente()); //funcionarios nao terao mais parametros (dados nao entram no txt. Possuem apenas um identificador)
+                f.add(new FuncExperiente());
             }
 
             int nuFuncsNovatos = Integer.parseInt(campos[1]);
@@ -52,11 +49,9 @@ public class AcessoDeDados {
                 f.add(new FuncNovato());
             }
 
-
-            String estrategiaAtendimento = arq.readLine(); //pega string com estrategia de etendimento
+            String estrategiaAtendimento = arq.readLine();
 
             String entidade = arq.readLine();
-            //valores inseridos corretamente em suas devidas classes (Carro, Motocicleta e Caminhao)!!!!!!!
             do {
                 String[] divide = entidade.split(",");
                 switch (divide[1]) {
@@ -78,7 +73,7 @@ public class AcessoDeDados {
 
             arq.close();
         } catch (FileNotFoundException e) {
-            System.out.println("Impossível abrir o arquivo: " + "nomeArquivo");
+            System.out.println("Impossível abrir o arquivo!" );
 
         } catch (IOException e) {
             System.out.println("Problema na leitura do arquivo");

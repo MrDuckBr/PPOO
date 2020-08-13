@@ -7,8 +7,7 @@
 
 
 public class PostoCombustivel{
-    private static ControleSimulacao controleSimulacao;
-/**Classe Principal que inicia a simulacao do programa
+    /**Classe Principal que inicia a simulacao do programa
  *
  *
  * */
@@ -17,7 +16,7 @@ public class PostoCombustivel{
         System.out.println("Bem vindo ao Posto Rapidex!!");
         System.out.println("A simulação está sendo iniciada ...");
 
-        controleSimulacao = new ControleSimulacao();
+        ControleSimulacao controleSimulacao = new ControleSimulacao();
         System.out.println("Calculando valores da simulacao..");
         controleSimulacao.iniciaFilaEventos();
 

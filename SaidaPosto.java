@@ -29,22 +29,7 @@ public class SaidaPosto extends Eventos {
     }
 
     @Override
-    public double calculaTempo() { // chegada mais tempo atendimento
-        return 0;
-    }
-
-    @Override
-    public String eventoAtual() {
-        return "Saida";
-    }
-
-    @Override
     public double getTempoEvento() {
         return 0;
-    }
-
-    @Override
-    public Veiculo getVeiculo(String nome) {
-        return null;
     }
 }
