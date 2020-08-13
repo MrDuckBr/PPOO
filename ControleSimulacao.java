@@ -1,3 +1,5 @@
+
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -46,24 +48,25 @@ public class ControleSimulacao  {
 
 
     public void atualizaTempoGlobal() { /* Se o primeiro for atendido ele tem que sair da fila , senao nao funciona*/
-        Veiculo veiculo = filaEventos.get(0);
-        if (filaEventos.size() >= 2 && disponibilidadeFuncionario() == null) {
-            Veiculo veiculo1 = filaEventos.get(1);
-            if (veiculo.getTempoNoPosto() + veiculo.getTempoChegadaVeiculo() > veiculo1.getTempoChegadaVeiculo()) {
-                //Ficar na espera de liberar um funcionario;
-                //calcular tempo de espera na fila
-                setTempo_Global( tempo_Global + veiculo1.getTempoChegadaVeiculo());
+        if(!filaEventos.isEmpty()) {
+            Veiculo veiculo = filaEventos.get(0);
+            if (tempo_Global == 0) { // primeiro veiculo
+                setTempo_Global(veiculo.getTempoChegadaVeiculo());
+            } else if (veiculo.getTempoChegadaVeiculo() > tempo_Global && disponibilidadeFuncionario() != null) {
+                setTempo_Global(veiculo.getTempoChegadaVeiculo());
+            } else if (filaEventos.size() >= 1 && disponibilidadeFuncionario() == null) { // esperar na fila
+                Funcionario f = gerenciaFuncionario();
+                if (f.getOcupadoAte() > filaEventos.get(0).getTempoChegadaVeiculo()) {
+                    setTempo_Global(f.getOcupadoAte());
+                    filaEventos.get(0).setTempoNoPosto(f.getOcupadoAte() - filaEventos.get(0).getTempoChegadaVeiculo());
+                    f.setOcupado(false);
+                }
             }
-
-        }if(veiculo.getTempoChegadaVeiculo() <= tempo_Global){
-                setTempo_Global(tempo_Global + veiculo.getTempoNoPosto());
-        }if(veiculo.getTempoChegadaVeiculo() > tempo_Global){
-            setTempo_Global(tempo_Global + veiculo.getTempoChegadaVeiculo());
         }
     }
 
     public Funcionario disponibilidadeFuncionario(){
-        gerenciaFuncionario();
+
         for(Funcionario f : funcionarios){
             if(!f.getOcupado()){
                 return  f;
@@ -73,10 +76,14 @@ public class ControleSimulacao  {
     }
     /**
      * Atualiza o funcionario para ver se esta ocupado*/
-    public void gerenciaFuncionario(){
-        for(Funcionario f : funcionarios){
-            f.setOcupado(!(tempo_Global >= f.getTempoFuncionario()));
+    public Funcionario gerenciaFuncionario() {
+        Funcionario menorTempoFunc = funcionarios.get(0);
+        for (Funcionario p : funcionarios) {
+            if (p.getOcupadoAte() <= menorTempoFunc.getOcupadoAte()) {
+                menorTempoFunc = p;
+            }
         }
+        return menorTempoFunc;
     }
 
     private void verFuncionarios(){
@@ -87,6 +94,7 @@ public class ControleSimulacao  {
 
     public void geraTempoFuncionario(){
         Funcionario f = disponibilidadeFuncionario();
+        atualizaTempoGlobal();
         if(f != null){
             if(f instanceof FuncNovato){
                 FuncNovato fn = (FuncNovato)f;
@@ -95,32 +103,28 @@ public class ControleSimulacao  {
                 FuncExperiente fe = (FuncExperiente) f;
                 f.setTempoFuncionario(random.nextDouble() * fe.geraAleatorioExperiente());
             }
-            System.out.println("Tempo Func " + f.getTempoFuncionario() + " Indice do Func" + f.getIdFunc() );
+
             f.setOcupadoAte( filaEventos.get(0).getTempoChegadaVeiculo()+(f.getTempoFuncionario()));//ate quando o func estara ocupado
             filaEventos.get(0).setTempoNoPosto(f.getTempoFuncionario());
             f.setOcupado(true);
-            verFuncionarios();
-            atualizaTempoGlobal();
+            System.out.println("Tempo Func " + f.getTempoFuncionario() + " Indice do Func" + f.getIdFunc() );
+           // verFuncionarios();
 
-            terminaEvento();
+            terminaEvento(f);
 
         }else {
             System.out.println("Nao ha funcionarios disponiveis"); // adicionar tratamento de excecao
-            Funcionario menorTempoFunc = funcionarios.get(0);
-            for(Funcionario p : funcionarios){
-                if(p.getOcupadoAte() <= menorTempoFunc.getOcupadoAte()){
-                    menorTempoFunc = p;
-                }
+
             }
-            filaEventos.get(0).setTempoNoPosto(menorTempoFunc.getOcupadoAte() - filaEventos.get(0).getTempoChegadaVeiculo()); // vai comecar com o tempo de espera na fila7
-            menorTempoFunc.setOcupado(false);
-            atualizaTempoGlobal();
-            iniciaFilaEventos();
+             // vai comecar com o tempo de espera na fila7
+        if(!filaEventos.isEmpty()) geraTempoFuncionario();
+            //atualizaTempoGlobal();
+            //iniciaFilaEventos();
 
         }
-    }
 
-    public void terminaEvento(){
+
+    public void terminaEvento(Funcionario f){
         saida.adicionaTempo( filaEventos.get(0).getTempoNoPosto());
         filaEventos.remove(0);
         System.out.println("Tempo global " + tempo_Global);
@@ -137,7 +141,6 @@ public class ControleSimulacao  {
 
     public void iniciaFilaEventos(){
         if(!verificaFila()){
-
             geraTempoFuncionario();
 
         }else{
