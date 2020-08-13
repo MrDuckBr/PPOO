@@ -14,8 +14,11 @@ public class PostoCombustivel{
  * */
     public static void main(String[] args) {
 
-        System.out.println("Bem vindo ao Posto Bomba!!");
+        System.out.println("Bem vindo ao Posto Rapidex!!");
+        System.out.println("A simulação está sendo iniciada ...");
+
         controleSimulacao = new ControleSimulacao();
+        System.out.println("Calculando valores da simulacao..");
         controleSimulacao.iniciaFilaEventos();
 
 

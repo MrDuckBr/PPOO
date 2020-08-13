@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class ChegadaPosto extends Eventos {
-    private final AcessoDeDados acessoDeDados;
     private final ArrayList<Veiculo> listaveiculos;
     private final ArrayList<Funcionario> listaFuncionario;
     private Veiculo veiculo;
@@ -12,7 +11,7 @@ public class ChegadaPosto extends Eventos {
      *
      */
     ChegadaPosto(){
-        acessoDeDados = new AcessoDeDados();
+        AcessoDeDados acessoDeDados = new AcessoDeDados();
         listaveiculos = acessoDeDados.acessaDadosVeiculo();
         listaFuncionario = acessoDeDados.acessaDadosFuncionario();
         ordenaLista(listaveiculos);

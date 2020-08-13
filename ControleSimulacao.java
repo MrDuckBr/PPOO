@@ -33,11 +33,19 @@ public class ControleSimulacao  {
 
     }
 
+    /**
+     * Metodo que retorna o tempo global da simulacao
+     * @return tempo_Global tempo este que mostra o tempo da simulacao
+     */
+    public double getTempo_Global(){
+        return tempo_Global;
+    }
     /**Metodo que inicializa os arrayList lidos a partir do arquivo ,
      * usada para ter um controle do que esta sendo realizado
      *
      */
     private void iniciaDadosSimulacao(){
+        System.out.println("Obtendo dados do Arquivo....");
         setArrayChegadaVeiculos();
         setArrayFuncionarios();
     }
@@ -56,6 +64,7 @@ public class ControleSimulacao  {
      */
     public void setArrayChegadaVeiculos(){
         filaEventos.addAll(chegadaPosto.getListaveiculos());
+        System.out.println("Lista de veiculos carregada....");
     }
 
     /**Método que recebe da classe ChegadaPosto os funcionarios lidos a partir do arquivo
@@ -63,6 +72,7 @@ public class ControleSimulacao  {
      */
     public void setArrayFuncionarios(){
         funcionarios.addAll(chegadaPosto.getListaFuncionario());
+        System.out.println("Lista de funcionarios carregada....");
     }
 
     /**Método que controla a lógica do programa em que verifica se o proximo objeto da lista a ser
@@ -76,9 +86,9 @@ public class ControleSimulacao  {
     public void atualizaTempoGlobal() {
         if(!filaEventos.isEmpty()) {
             Veiculo veiculo = filaEventos.get(0);
-            if (tempo_Global == 0) {
+            if (getTempo_Global() == 0) {
                 setTempo_Global(veiculo.getTempoChegadaVeiculo());
-            } else if (veiculo.getTempoChegadaVeiculo() > tempo_Global && disponibilidadeFuncionario() != null) {
+            } else if (veiculo.getTempoChegadaVeiculo() > getTempo_Global() && disponibilidadeFuncionario() != null) {
                 setTempo_Global(veiculo.getTempoChegadaVeiculo());
             } else if (filaEventos.size() >= 1 && disponibilidadeFuncionario() == null) {
                 Funcionario f = gerenciaFuncionario();
@@ -146,12 +156,12 @@ public class ControleSimulacao  {
         if(f != null){
             defineTempoFuncionario(f);
             f.setOcupadoAte( filaEventos.get(0).getTempoChegadaVeiculo()+(f.getTempoFuncionario()));//ate quando o func estara ocupado
-            temposFuncionarios.add(f.getOcupadoAte());
+            temposFuncionarios.add(f.getTempoFuncionario());
             filaEventos.get(0).setTempoNoPosto(f.getTempoFuncionario());
             f.setOcupado(true);
             terminaEvento();
         }else {
-            System.out.println("Nao ha funcionarios disponiveis");
+            System.out.printf("\nNao ha funcionarios disponiveis , o proximo estara disponivel no tempo %.2f " , gerenciaFuncionario().getOcupadoAte());
         }
         if(!filaEventos.isEmpty()) geraTempoFuncionario();
     }
@@ -162,7 +172,6 @@ public class ControleSimulacao  {
     public void terminaEvento(){
         saida.adicionaTempo( filaEventos.get(0).getTempoNoPosto());
         filaEventos.remove(0);
-        System.out.println("Tempo global " + tempo_Global);
         iniciaFilaEventos();
     }
 
@@ -185,7 +194,7 @@ public class ControleSimulacao  {
             geraTempoFuncionario();
 
         }else{
-            System.out.println("Fim da Simulacao");
+            System.out.println("\nFim da Simulacao");
             geraDadosEstatiticos();
         }
     }
@@ -198,6 +207,7 @@ public class ControleSimulacao  {
         estatisticaSimulacao.calculaMediaFuncionario(temposFuncionarios);
         estatisticaSimulacao.calculaMediaClientes(saida.permenciaVeiculos());
         estatisticaSimulacao.mediasPosto();
+        System.out.printf("\n Tempo do Posto no fim da simulacao %.2f", getTempo_Global());
     }
 
 
