@@ -21,11 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="db9110b4-7dcc-4447-a4be-480945f54acd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChegadaPosto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChegadaPosto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControleSimulacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ControleSimulacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EstatisticaSimulacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/EstatisticaSimulacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PostoCombustivel.java" beforeDir="false" afterPath="$PROJECT_DIR$/PostoCombustivel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nomeArquivo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/nomeArquivo.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,11 +162,6 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ControleSimulacao.java</url>
-          <line>197</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
