@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db9110b4-7dcc-4447-a4be-480945f54acd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EstatisticaSimulacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/EstatisticaSimulacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControleSimulacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ControleSimulacao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
