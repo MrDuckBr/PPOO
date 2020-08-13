@@ -14,6 +14,7 @@ public class ControleSimulacao  {
     private  SaidaPosto saida;
     private static ChegadaPosto chegadaPosto;
     private static EstatisticaSimulacao estatisticaSimulacao;
+    private static ArrayList<Double> temposFuncionarios;
 
 
     ControleSimulacao(){
@@ -23,6 +24,7 @@ public class ControleSimulacao  {
         random = new Random();
         filaEventos = new ArrayList<>();
         funcionarios = new ArrayList<>();
+        temposFuncionarios = new ArrayList<>();
         saida = new SaidaPosto();
         iniciaDadosSimulacao();
 
@@ -59,6 +61,9 @@ public class ControleSimulacao  {
                 if (f.getOcupadoAte() > filaEventos.get(0).getTempoChegadaVeiculo()) {
                     setTempo_Global(f.getOcupadoAte());
                     filaEventos.get(0).setTempoNoPosto(f.getOcupadoAte() - filaEventos.get(0).getTempoChegadaVeiculo());
+                    f.setOcupado(false);
+                }else if(f.getOcupadoAte() < filaEventos.get(0).getTempoChegadaVeiculo()){
+                    setTempo_Global(filaEventos.get(0).getTempoChegadaVeiculo());
                     f.setOcupado(false);
                 }
             }
@@ -105,6 +110,7 @@ public class ControleSimulacao  {
             }
 
             f.setOcupadoAte( filaEventos.get(0).getTempoChegadaVeiculo()+(f.getTempoFuncionario()));//ate quando o func estara ocupado
+            temposFuncionarios.add(f.getOcupadoAte());
             filaEventos.get(0).setTempoNoPosto(f.getTempoFuncionario());
             f.setOcupado(true);
             System.out.println("Tempo Func " + f.getTempoFuncionario() + " Indice do Func" + f.getIdFunc() );
@@ -147,7 +153,7 @@ public class ControleSimulacao  {
             //System.out.println("Tempo global " + tempo_Global);
             System.out.println("Fim da Simulacao");
             estatisticaSimulacao.criarGraficoCliente(saida.teste());
-
+            //temposFuncionarios;
            // System.exit(0);
         }
     }

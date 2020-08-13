@@ -26,13 +26,20 @@ public class EstatisticaSimulacao extends JFrame {
 
     }
 
-
-    public void calculaMediaClientes(Queue<Veiculo> lista){
-        for (Veiculo f:lista) {
-            tempoMedioCliente += f.getTempoNoPosto();
+    public void calculaMediaFuncionario(ArrayList<Double> funcionario){
+        double valor = 0;
+        for (Double func : funcionario) {
+            valor += func;
         }
-        tempoMedioCliente = tempoMedioCliente / lista.size();
+    }
 
+
+
+    public void calculaMediaClientes(ArrayList<Double> veiculos){
+        double valor = 0;
+        for (Double veiculo : veiculos) {
+            valor += veiculo;
+        }
     }
 
     public void calculaTempoFunc(ArrayList<Funcionario> func){
@@ -45,13 +52,9 @@ public class EstatisticaSimulacao extends JFrame {
        for(int i = 0; i < veiculos.size() ; i++) {
            barra.setValue(veiculos.get(i), Integer.toString(i+1), "");
        }
-
         JFreeChart grafico = ChartFactory.createBarChart("Posto Combustivel","Veiculos" , "Tempo no posto",barra, PlotOrientation.VERTICAL,true,true,false);
-
         ChartPanel painel = new ChartPanel(grafico);
         add(painel);
-
-
     }
 
 
