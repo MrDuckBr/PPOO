@@ -153,7 +153,9 @@ public class ControleSimulacao  {
             //System.out.println("Tempo global " + tempo_Global);
             System.out.println("Fim da Simulacao");
             estatisticaSimulacao.criarGraficoCliente(saida.teste());
-            //temposFuncionarios;
+            estatisticaSimulacao.calculaMediaFuncionario(temposFuncionarios);
+            estatisticaSimulacao.calculaMediaClientes(saida.teste());
+            estatisticaSimulacao.mediasPosto();
            // System.exit(0);
         }
     }
