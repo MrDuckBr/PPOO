@@ -1,5 +1,6 @@
 /**Classe controle simulacao que controla toda a simulacao do programa
- *
+ * @author Walisson Mendes
+ * @author Tales Ribeiro
  */
 
 import java.util.ArrayList;
@@ -16,9 +17,9 @@ public class ControleSimulacao  {
     private static EstatisticaSimulacao estatisticaSimulacao;
     private static ArrayList<Double> temposFuncionarios;
 
-/**Construtor da classe Controle simulacao, inicializa as variaves das classes a qual ela tera acesso
- *
- */
+    /**Construtor da classe Controle simulacao, inicializa as variaves das classes a qual ela tera acesso
+     *
+     */
     ControleSimulacao(){
         chegadaPosto = new ChegadaPosto();
         estatisticaSimulacao = new EstatisticaSimulacao();
@@ -61,7 +62,7 @@ public class ControleSimulacao  {
      *
      */
     public void setArrayFuncionarios(){
-       funcionarios.addAll(chegadaPosto.getListaFuncionario());
+        funcionarios.addAll(chegadaPosto.getListaFuncionario());
     }
 
     /**Método que controla a lógica do programa em que verifica se o proximo objeto da lista a ser
@@ -143,17 +144,17 @@ public class ControleSimulacao  {
         Funcionario f = disponibilidadeFuncionario();
         atualizaTempoGlobal();
         if(f != null){
-           defineTempoFuncionario(f);
-           f.setOcupadoAte( filaEventos.get(0).getTempoChegadaVeiculo()+(f.getTempoFuncionario()));//ate quando o func estara ocupado
+            defineTempoFuncionario(f);
+            f.setOcupadoAte( filaEventos.get(0).getTempoChegadaVeiculo()+(f.getTempoFuncionario()));//ate quando o func estara ocupado
             temposFuncionarios.add(f.getOcupadoAte());
             filaEventos.get(0).setTempoNoPosto(f.getTempoFuncionario());
             f.setOcupado(true);
             terminaEvento();
         }else {
             System.out.println("Nao ha funcionarios disponiveis");
-            }
-        if(!filaEventos.isEmpty()) geraTempoFuncionario();
         }
+        if(!filaEventos.isEmpty()) geraTempoFuncionario();
+    }
 
     /**Método que remove o Veiculo da fila após ser atendido
      * e adiciona ele ao evento saida e chama novamente o evento para um novo evento
