@@ -97,6 +97,7 @@ public class ControleSimulacao  {
         System.out.println(" ");
     }
 
+
     public void geraTempoFuncionario(){
         Funcionario f = disponibilidadeFuncionario();
         atualizaTempoGlobal();
@@ -152,9 +153,9 @@ public class ControleSimulacao  {
         }else{
             //System.out.println("Tempo global " + tempo_Global);
             System.out.println("Fim da Simulacao");
-            estatisticaSimulacao.criarGraficoCliente(saida.teste());
+            estatisticaSimulacao.criarGraficoCliente(saida.permenciaVeiculos());
             estatisticaSimulacao.calculaMediaFuncionario(temposFuncionarios);
-            estatisticaSimulacao.calculaMediaClientes(saida.teste());
+            estatisticaSimulacao.calculaMediaClientes(saida.permenciaVeiculos());
             estatisticaSimulacao.mediasPosto();
            // System.exit(0);
         }

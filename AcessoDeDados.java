@@ -24,6 +24,18 @@ public class AcessoDeDados {
     public AcessoDeDados(){
         lerArquivoTXT();
     }
+
+    /**
+     * Faz a leitura do arquivo texto.
+     *
+     * A primeira linha recebe a quantidade de Funcionarios Experientes e Funcionarios Novatos (separados por virgula)
+     * Estes valores são utilizados para criar X,Y objetos de cada tipo de funcionario
+     *
+     * A segunda linha armazena o método de atendimento utilizado (FIFO)
+     *
+     * A partir da terceira linha, recebemos dados dos objetos, separados por virgula e armazenamos estes dados em um ArrayList com seus devidos tipos (Carro, Motocicletat, Caminhao)
+     * As informações para os veículos são: int tempoChegadaVeiculo, int capTanque, int qtdPneu, String modelo, String anoFabricacao, String tipoCombustivel
+     */
     public void lerArquivoTXT() {
         try {
             BufferedReader arq = new BufferedReader(new FileReader("nomeArquivo.txt"));

@@ -21,10 +21,19 @@
   <component name="ChangeListManager">
     <list default="true" id="7becc24d-b8e0-4aa9-a307-8e5a0b997b18" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AcessoDeDados.java" beforeDir="false" afterPath="$PROJECT_DIR$/AcessoDeDados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Caminhao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Caminhao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Carro.java" beforeDir="false" afterPath="$PROJECT_DIR$/Carro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChegadaPosto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChegadaPosto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControleSimulacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ControleSimulacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EstatisticaSimulacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/EstatisticaSimulacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FuncExperiente.java" beforeDir="false" afterPath="$PROJECT_DIR$/FuncExperiente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FuncNovato.java" beforeDir="false" afterPath="$PROJECT_DIR$/FuncNovato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Funcionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Motocicleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/Motocicleta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SaidaPosto.java" beforeDir="false" afterPath="$PROJECT_DIR$/SaidaPosto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Veiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PPOO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PPOO/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PPOO/ControleSimulacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PPOO/ControleSimulacao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PPOO/EstatisticaSimulacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PPOO/EstatisticaSimulacao.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +70,10 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="7becc24d-b8e0-4aa9-a307-8e5a0b997b18" name="Default Changelist" comment="" />
@@ -77,12 +89,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="519" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1597199919646">
@@ -101,21 +114,25 @@
       <screen x="62" y="0" width="1304" height="768" />
     </state>
     <state x="494" y="138" key="FileChooserDialogImpl/62.0.1304.768@62.0.1304.768" timestamp="1597268264991" />
-    <state width="1261" height="545" key="GridCell.Tab.0.bottom" timestamp="1597290132831">
-      <screen x="62" y="0" width="1304" height="768" />
+    <state width="1877" height="327" key="GridCell.Tab.0.bottom" timestamp="1597293126990">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="327" key="GridCell.Tab.0.bottom/-1366.207.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1597293126990" />
     <state width="1261" height="545" key="GridCell.Tab.0.bottom/62.0.1304.768@62.0.1304.768" timestamp="1597290132831" />
-    <state width="1261" height="545" key="GridCell.Tab.0.center" timestamp="1597290132831">
-      <screen x="62" y="0" width="1304" height="768" />
+    <state width="1877" height="327" key="GridCell.Tab.0.center" timestamp="1597293126990">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="327" key="GridCell.Tab.0.center/-1366.207.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1597293126990" />
     <state width="1261" height="545" key="GridCell.Tab.0.center/62.0.1304.768@62.0.1304.768" timestamp="1597290132831" />
-    <state width="1261" height="545" key="GridCell.Tab.0.left" timestamp="1597290132831">
-      <screen x="62" y="0" width="1304" height="768" />
+    <state width="1877" height="327" key="GridCell.Tab.0.left" timestamp="1597293126990">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="327" key="GridCell.Tab.0.left/-1366.207.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1597293126990" />
     <state width="1261" height="545" key="GridCell.Tab.0.left/62.0.1304.768@62.0.1304.768" timestamp="1597290132831" />
-    <state width="1261" height="545" key="GridCell.Tab.0.right" timestamp="1597290132831">
-      <screen x="62" y="0" width="1304" height="768" />
+    <state width="1877" height="327" key="GridCell.Tab.0.right" timestamp="1597293126990">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="327" key="GridCell.Tab.0.right/-1366.207.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1597293126990" />
     <state width="1261" height="545" key="GridCell.Tab.0.right/62.0.1304.768@62.0.1304.768" timestamp="1597290132831" />
     <state width="1261" height="204" key="GridCell.Tab.1.bottom" timestamp="1597277722769">
       <screen x="62" y="0" width="1304" height="768" />
@@ -169,8 +186,7 @@
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
-        <PinnedItemInfo parentTag="ControleSimulacao" memberName="filaEventos" />
-        <PinnedItemInfo parentTag="ControleSimulacao" memberName="funcionarios" />
+        <PinnedItemInfo />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>
