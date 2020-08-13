@@ -11,7 +11,7 @@ public class ControleSimulacao  {
     private static double tempo_Global;
     private final Random random;
     private ArrayList<Veiculo> filaEventos;
-    private final ArrayList<Funcionario> funcionarios;
+    private ArrayList<Funcionario> funcionarios;
     private  SaidaPosto saida;
     private static ChegadaPosto chegadaPosto;
     private static EstatisticaSimulacao estatisticaSimulacao;
@@ -70,15 +70,9 @@ public class ControleSimulacao  {
     /**Método que recebe da classe ChegadaPosto os funcionarios lidos a partir do arquivo
      *
      */
-    public void setArrayFuncionarios() throws IndexOutOfBoundsException{
-        try{
-            if(chegadaPosto.getListaFuncionario().isEmpty()) {
-                funcionarios.addAll(chegadaPosto.getListaFuncionario());
-                System.out.println("Lista de funcionarios carregada....");
-            }
-        }catch (IndexOutOfBoundsException e){
-            System.out.print("Não há funcionarios no posto para atender" + e.toString());
-        }
+    public void setArrayFuncionarios(){
+        funcionarios.addAll(chegadaPosto.getListaFuncionario());
+        System.out.println("Lista de funcionarios carregada....");
     }
 
     /**Método que controla a lógica do programa em que verifica se o proximo objeto da lista a ser
@@ -115,13 +109,14 @@ public class ControleSimulacao  {
      * @return Retorna o funcionario livre para atendimento , ou , null se não houver funcionarios livres
      */
     public Funcionario disponibilidadeFuncionario() {
-        for (Funcionario f : funcionarios) {
-            if (!f.getOcupado()) {
-                return f;
+            for (Funcionario f : funcionarios) {
+                if (!f.getOcupado()) {
+                    return f;
+                }
             }
-        }
-        return null;
+            return null;
     }
+
 
 
     /**Método que verifica o funcionario que terminara a tarefa mais rapidamente para atender o proximo da fila
