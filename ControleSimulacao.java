@@ -209,6 +209,7 @@ public class ControleSimulacao  {
         estatisticaSimulacao.calculaMediaFuncionario(temposFuncionarios);
         estatisticaSimulacao.calculaMediaClientes(saida.permenciaVeiculos());
         estatisticaSimulacao.mediasPosto();
+        estatisticaSimulacao.gravarEstatisticaTxt(saida.permenciaVeiculos());
         System.out.printf("\n Tempo do Posto no fim da simulacao %.2f", getTempo_Global());
     }
 

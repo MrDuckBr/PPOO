@@ -9,7 +9,7 @@
 public class PostoCombustivel{
     /**Classe Principal que inicia a simulacao do programa
  *
- *
+ * @param args Construcao da main
  * */
     public static void main(String[] args) {
 

@@ -1,0 +1,19 @@
+Media do Tempo de Atendimento dos Funcionarios:41.747068918696165
+Media do Tempo de Atendimento para cada Cliente:42.74398204409525
+Tempo do Veiculo 0 no Posto ->  34.447551809452534 
+Tempo do Veiculo 1 no Posto ->  45.70421375172752 
+Tempo do Veiculo 2 no Posto ->  38.540216528975144 
+Tempo do Veiculo 3 no Posto ->  41.22738115492634 
+Tempo do Veiculo 4 no Posto ->  37.5908895925857 
+Tempo do Veiculo 5 no Posto ->  87.43623367410021 
+Tempo do Veiculo 6 no Posto ->  23.181678928954707 
+Tempo do Veiculo 7 no Posto ->  76.82760683565988 
+Tempo do Veiculo 8 no Posto ->  77.15419797748979 
+Tempo do Veiculo 9 no Posto ->  14.778075864401892 
+Tempo do Veiculo 10 no Posto ->  54.78939943129224 
+Tempo do Veiculo 11 no Posto ->  38.356998048124694 
+Tempo do Veiculo 12 no Posto ->  73.06714582831819 
+Tempo do Veiculo 13 no Posto ->  38.12792623053242 
+Tempo do Veiculo 14 no Posto ->  3.6037503969798923 
+Tempo do Veiculo 15 no Posto ->  26.793974845017924 
+Tempo do Veiculo 16 no Posto ->  15.020453851080147 

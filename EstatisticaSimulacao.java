@@ -5,6 +5,8 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 import javax.swing.*;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -78,6 +80,23 @@ public class EstatisticaSimulacao  {
         janela.add(painel);
     }
 
+    /**
+     * Metodo que gera os dados do relatorio estatistico
+     * @param veiculos recebe um arraylist com o tempo dos veiculos no posto de combustivel
+     */
+    public void gravarEstatisticaTxt(ArrayList<Double> veiculos) {
+        try (FileWriter arquivo = new FileWriter("Estatistica.txt")) {
+           arquivo.write("Media do Tempo de Atendimento dos Funcionarios:" + mediafuncionario + "\n");
+           arquivo.write("Media do Tempo de Atendimento para cada Cliente:" + mediaCliente+"\n");
+
+            for(int i = 0; i < veiculos.size() ; i++) {
+                arquivo.write( "Tempo do Veiculo " + i + " no Posto ->  " +veiculos.get(i)  + " "+ "\n");
+            }
+        } catch (IOException e) {
+            System.out.println("Falha ao salvar o Arquivo " + "Estatistica.txt");
+        }
+
+    }
 
 
 
