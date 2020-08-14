@@ -12,8 +12,6 @@ import java.util.ArrayList;
  * atendimento do veiculo e do funcionario;
  */
 public class EstatisticaSimulacao  {
-    private double tempoMedioCliente;
-    private double tempoMedioFunc;
     private DefaultCategoryDataset barra;
     private JFrame janela = new JFrame();
     private double mediaCliente ;
